@@ -5,12 +5,21 @@ import getWeb3 from "./getWeb3";
 import "./App.css";
 
 var md5 = require("md5");
+
 const newEmptyBook = {
   recordHash: "",
   authorName: "",
   title: "",
   email: "",
 };
+
+const toBase64 = (file) =>
+  new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = (error) => reject(error);
+  });
 
 class App extends Component {
   state = {
@@ -72,8 +81,9 @@ class App extends Component {
     this.setState({ storageValue: response });
   };
 
-  onNewFileChange = (e) => {
-    let recordHash = md5(e.target.files[0]);
+  onNewFileChange = async (e) => {
+    const b64Hash = await toBase64(e.target.files[0]);
+    let recordHash = md5(b64Hash);
     this.setState((oldState) => ({
       ...oldState,
       newBook: {
@@ -83,8 +93,9 @@ class App extends Component {
     }));
   };
 
-  onFetchFileChange = (e) => {
-    let recordHash = md5(e.target.files[0]);
+  onFetchFileChange = async (e) => {
+    const b64Hash = await toBase64(e.target.files[0]);
+    let recordHash = md5(b64Hash);
     this.setState((oldState) => ({
       ...oldState,
       fetchedBookHash: recordHash,
