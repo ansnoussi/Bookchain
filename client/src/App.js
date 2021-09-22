@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import SimpleStorageContract from "./contracts/SimpleStorage.json";
+import Bookchain from "./contracts/Bookchain.json";
 import getWeb3 from "./getWeb3";
 
 import "./App.css";
@@ -47,16 +47,14 @@ class App extends Component {
 
       // Get the contract instance.
       const networkId = await web3.eth.net.getId();
-      const deployedNetwork = SimpleStorageContract.networks[networkId];
+      const deployedNetwork = Bookchain.networks[networkId];
       const instance = new web3.eth.Contract(
-        SimpleStorageContract.abi,
+        Bookchain.abi,
         deployedNetwork && deployedNetwork.address
       );
 
       // Set web3, accounts, and contract to the state, and then proceed with an
       // example of interacting with the contract's methods.
-
-      // this.setState({ web3, accounts, contract: instance }, this.runExample);
 
       this.setState({ web3, accounts, contract: instance });
     } catch (error) {
@@ -66,19 +64,6 @@ class App extends Component {
       );
       console.error(error);
     }
-  };
-
-  runExample = async () => {
-    const { accounts, contract } = this.state;
-
-    // Stores a given value, 5 by default.
-    await contract.methods.set(5).send({ from: accounts[0] });
-
-    // Get the value from the contract to prove it worked.
-    const response = await contract.methods.get().call();
-
-    // Update state with the result.
-    this.setState({ storageValue: response });
   };
 
   onNewFileChange = async (e) => {
@@ -104,18 +89,27 @@ class App extends Component {
 
   // FINAL FUNCS
 
-  submitNewBook = (e) => {
+  submitNewBook = async (e) => {
     e.preventDefault();
+    const { accounts, contract } = this.state;
+    const { recordHash, authorName, title, email } = this.state.newBook;
+    await contract.methods
+      .authNewBook(recordHash, authorName, title, email)
+      .send({ from: accounts[0] });
     this.setState({ status: "DONE" });
-    console.log(this.state.newBook);
   };
 
-  fetchBook = (e) => {
+  fetchBook = async (e) => {
     e.preventDefault();
+    const { accounts, contract } = this.state;
+
+    const response = await contract.methods
+      .getBookDetailFromHash(this.state.fetchedBookHash)
+      .call();
+
     this.setState({
-      bookDetails: { authorName: "test1", title: "test2", email: "title3" },
+      bookDetails: { ...response },
     });
-    console.log(this.state.fetchedBookHash);
   };
 
   render() {

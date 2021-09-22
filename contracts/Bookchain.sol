@@ -5,21 +5,22 @@ import './Ownable.sol';
 contract Bookchain is Ownable {
 
   struct Book {
-    bytes32 recordHash;
-    bytes32 authorName;
-    bytes32 title;
-    bytes32 email;
+     string recordHash;
+     string authorName;
+     string title;
+     string email;
     uint timestamp;
     bool isDocExists;
   }
 
-  mapping(bytes32 => Book) public documentdata;
+  mapping( string => Book) public documentdata;
 
-  event _NewBookAuth(bytes32 indexed recordHash, bytes32 authorName, bytes32 title, bytes32 email, uint256 timestamp, bool isDocExists);
+  event _NewBookAuth( string indexed recordHash,  string authorName,  string title,  string email, uint256 timestamp, bool isDocExists);
 
-  function authNewBook(bytes32 recordHash, bytes32 authorName, bytes32 title, bytes32 email) external {
+  function authNewBook( string calldata recordHash,  string calldata authorName,  string calldata title,  string calldata email) external {
 
-    require(recordHash != "");
+    // I could use StringUtils here, but this is simpler
+    require(keccak256( abi.encodePacked(recordHash)) != keccak256(""));
 
     Bookchain.Book storage bookdata = documentdata[recordHash];
     bookdata.recordHash = recordHash;
@@ -33,11 +34,11 @@ contract Bookchain is Ownable {
   }
 
 
-  function exists(bytes32 record) view public returns(bool) {
+  function exists( string memory record) view public returns(bool) {
     return documentdata[record].isDocExists;
   }
 
-  function getBookDetailFromHash(bytes32 record) view public returns ( bytes32,bytes32,bytes32,uint256) {
+  function getBookDetailFromHash( string memory record) view public returns (  string memory, string memory, string memory,uint256) {
     return  ( documentdata[record].authorName , documentdata[record].title, documentdata[record].email, documentdata[record].timestamp );
   }
 
