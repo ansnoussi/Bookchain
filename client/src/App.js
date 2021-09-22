@@ -91,12 +91,16 @@ class App extends Component {
 
   submitNewBook = async (e) => {
     e.preventDefault();
-    const { accounts, contract } = this.state;
-    const { recordHash, authorName, title, email } = this.state.newBook;
-    await contract.methods
-      .authNewBook(recordHash, authorName, title, email)
-      .send({ from: accounts[0] });
-    this.setState({ status: "DONE" });
+    try {
+      const { accounts, contract } = this.state;
+      const { recordHash, authorName, title, email } = this.state.newBook;
+      await contract.methods
+        .authNewBook(recordHash, authorName, title, email)
+        .send({ from: accounts[0], gas: 100000 });
+      this.setState({ status: "DONE" });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   fetchBook = async (e) => {
