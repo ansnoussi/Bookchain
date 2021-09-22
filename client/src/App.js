@@ -4,10 +4,30 @@ import getWeb3 from "./getWeb3";
 
 import "./App.css";
 
+const newEmptyBook = {
+  recordHash: "",
+  authorName: "",
+  title: "",
+  email: "",
+};
+
 class App extends Component {
-  state = { storageValue: 0, web3: null, accounts: null, contract: null };
+  state = {
+    web3: null,
+    accounts: null,
+    contract: null,
+    storageValue: 0,
+    newBook: newEmptyBook,
+    fetchedBookHash: "",
+    bookDetails: null,
+    status: "",
+  };
 
   componentDidMount = async () => {
+    await this.initBookchain();
+  };
+
+  initBookchain = async () => {
     try {
       // Get network provider and web3 instance.
       const web3 = await getWeb3();
@@ -51,6 +71,12 @@ class App extends Component {
     this.setState({ storageValue: response });
   };
 
+  submitNewBook = (e) => {
+    e.preventDefault();
+    this.setState({ status: "DONE" });
+    console.log(this.state);
+  };
+
   render() {
     if (!this.state.web3) {
       return <div>Loading Web3., accounts, and contract...</div>;
@@ -81,25 +107,65 @@ class App extends Component {
               <label>
                 Hash <small>The hash of the document</small>
               </label>
-              <input type="text" />
+              <input type="text" readOnly />
             </div>
             <div>
               <label>Author Name</label>
-              <input type="text" />
+              <input
+                type="text"
+                onChange={(e) => {
+                  let newAuthor = e.target.value;
+                  this.setState((oldState) => ({
+                    ...oldState,
+                    newBook: {
+                      ...oldState.newBook,
+                      authorName: newAuthor,
+                    },
+                  }));
+                }}
+              />
             </div>
             <div>
               <label>Title</label>
-              <input type="text" />
+              <input
+                type="text"
+                onChange={(e) => {
+                  let newTitle = e.target.value;
+
+                  this.setState((oldState) => ({
+                    ...oldState,
+                    newBook: {
+                      ...oldState.newBook,
+                      title: newTitle,
+                    },
+                  }));
+                }}
+              />
             </div>
             <div>
               <label>Email</label>
-              <input type="text" />
+              <input
+                type="text"
+                onChange={(e) => {
+                  let newEmail = e.target.value;
+
+                  this.setState((oldState) => ({
+                    ...oldState,
+                    newBook: {
+                      ...oldState.newBook,
+                      email: newEmail,
+                    },
+                  }));
+                }}
+              />
             </div>
             <div>
-              <button type="submit">Authorize it!</button>
+              <button type="submit" onClick={this.submitNewBook}>
+                Authorize it!
+              </button>
             </div>
             <div>
-              <label style={{ textAlign: "center" }}> DONE </label>
+              <label style={{ textAlign: "center" }}>{this.state.status}</label>
             </div>
           </form>
 
@@ -115,18 +181,21 @@ class App extends Component {
               <label>
                 Hash <small>The hash of the document</small>
               </label>
-              <input type="text" />
+              <input readOnly type="text" />
             </div>
             <div>
               <button>Get Doc Details from Bookchain</button>
             </div>
-            <div id="details" className="docDetails">
-              <ul>
-                <li>Author Name: test1 </li>
-                <li>Title: test2 </li>
-                <li>Email: test3 </li>
-              </ul>
-            </div>
+
+            {this.state.bookDetails && (
+              <div id="details" className="docDetails">
+                <ul>
+                  <li>Author Name: {this.state.bookDetails.authorName} </li>
+                  <li>Title: {this.state.bookDetails.title} </li>
+                  <li>Email: {this.state.bookDetails.email} </li>
+                </ul>
+              </div>
+            )}
           </form>
           {/* DEBUG */}
           <form>

@@ -208,12 +208,12 @@
       "type": "function"
     }
   ],
-  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"recordHash\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"authorName\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"title\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"email\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isDocExists\",\"type\":\"bool\"}],\"name\":\"_NewBookAuth\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"recordHash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"authorName\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"title\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"email\",\"type\":\"bytes32\"}],\"name\":\"authNewBook\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"documentdata\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"recordHash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"authorName\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"title\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"email\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isDocExists\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"record\",\"type\":\"bytes32\"}],\"name\":\"exists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"record\",\"type\":\"bytes32\"}],\"name\":\"getBookDetailFromHash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Bookchain.sol\":\"Bookchain\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Bookchain.sol\":{\"keccak256\":\"0xdde5c2c091ce80db6decbb59d15d90dfa13a71168c66bff943f1817ce96d155a\",\"urls\":[\"bzz-raw://ca0901dff773f7f659df628a0ca8c7f65da3134b3d66c036d3e9cf3628a1de87\",\"dweb:/ipfs/QmPLpDCRmBe9RMXyukuVJeqWeSfsdbpiShsMPneycNBzqH\"]},\"project:/contracts/Ownable.sol\":{\"keccak256\":\"0x9f06ed20fd29228294f4a82577d082adf688aea114848fd6fd28751c2d207a59\",\"urls\":[\"bzz-raw://6afa789e6750385e4839e209405ebd3da17f622a8495341dec439c38ec89de64\",\"dweb:/ipfs/QmPeGM7xgtpEEoHKx3kZbBpk8B5GmQLM8SSh4M6TYt5G3U\"]}},\"version\":1}",
-  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610529806100536000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c806338a699a4146100675780636408609f146100ad578063843e8d8a146101165780638da5cb5b14610162578063a5fb921f146101ac578063f2fde38b14610203575b600080fd5b6100936004803603602081101561007d57600080fd5b8101908080359060200190929190505050610247565b604051808215151515815260200191505060405180910390f35b6100d9600480360360208110156100c357600080fd5b8101908080359060200190929190505050610274565b6040518087815260200186815260200185815260200184815260200183815260200182151515158152602001965050505050505060405180910390f35b6101606004803603608081101561012c57600080fd5b81019080803590602001909291908035906020019092919080359060200190929190803590602001909291905050506102bd565b005b61016a610390565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101d8600480360360208110156101c257600080fd5b81019080803590602001909291905050506103b5565b6040518085815260200184815260200183815260200182815260200194505050505060405180910390f35b6102456004803603602081101561021957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610426565b005b60006001600083815260200190815260200160002060050160009054906101000a900460ff169050919050565b60016020528060005260406000206000915090508060000154908060010154908060020154908060030154908060040154908060050160009054906101000a900460ff16905086565b60008414156102cb57600080fd5b600060016000868152602001908152602001600020905084816000018190555083816001018190555082816002018190555081816003018190555042816004018190555060018160050160006101000a81548160ff021916908315150217905550847fc481bb149c66d56208c028a621fc4acbda596275d25ca429dc73edf59bb1ae6b85858542600160405180868152602001858152602001848152602001838152602001821515151581526020019550505050505060405180910390a25050505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080600080600160008681526020019081526020016000206001015460016000878152602001908152602001600020600201546001600088815260200190815260200160002060030154600160008981526020019081526020016000206004015493509350935093509193509193565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156104f157600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16146104f057806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b5b5056fea265627a7a72315820bb6c38cdde8681131794f2d85c378149a4c2f1f040d4fbfe8e10427fa00f616464736f6c63430005100032",
-  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c806338a699a4146100675780636408609f146100ad578063843e8d8a146101165780638da5cb5b14610162578063a5fb921f146101ac578063f2fde38b14610203575b600080fd5b6100936004803603602081101561007d57600080fd5b8101908080359060200190929190505050610247565b604051808215151515815260200191505060405180910390f35b6100d9600480360360208110156100c357600080fd5b8101908080359060200190929190505050610274565b6040518087815260200186815260200185815260200184815260200183815260200182151515158152602001965050505050505060405180910390f35b6101606004803603608081101561012c57600080fd5b81019080803590602001909291908035906020019092919080359060200190929190803590602001909291905050506102bd565b005b61016a610390565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101d8600480360360208110156101c257600080fd5b81019080803590602001909291905050506103b5565b6040518085815260200184815260200183815260200182815260200194505050505060405180910390f35b6102456004803603602081101561021957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610426565b005b60006001600083815260200190815260200160002060050160009054906101000a900460ff169050919050565b60016020528060005260406000206000915090508060000154908060010154908060020154908060030154908060040154908060050160009054906101000a900460ff16905086565b60008414156102cb57600080fd5b600060016000868152602001908152602001600020905084816000018190555083816001018190555082816002018190555081816003018190555042816004018190555060018160050160006101000a81548160ff021916908315150217905550847fc481bb149c66d56208c028a621fc4acbda596275d25ca429dc73edf59bb1ae6b85858542600160405180868152602001858152602001848152602001838152602001821515151581526020019550505050505060405180910390a25050505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080600080600160008681526020019081526020016000206001015460016000878152602001908152602001600020600201546001600088815260200190815260200160002060030154600160008981526020019081526020016000206004015493509350935093509193509193565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156104f157600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16146104f057806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b5b5056fea265627a7a72315820bb6c38cdde8681131794f2d85c378149a4c2f1f040d4fbfe8e10427fa00f616464736f6c63430005100032",
-  "sourceMap": "59:1223:0:-;;;326:10:1;318:5;;:18;;;;;;;;;;;;;;;;;;59:1223:0;;;;;;",
-  "deployedSourceMap": "59:1223:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:1223:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;922:108;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;922:108:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;243:44;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;243:44:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;430:487;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;430:487:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;260:20:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1034:245:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1034:245:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;456:123:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;456:123:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;922:108:0;974:4;993:12;:20;1006:6;993:20;;;;;;;;;;;:32;;;;;;;;;;;;986:39;;922:108;;;:::o;243:44::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;430:487::-;545:16;:10;:16;;537:25;;;;;;569:30;602:12;:24;615:10;602:24;;;;;;;;;;;569:57;;653:10;632:7;:18;;:31;;;;690:10;669:7;:18;;:31;;;;722:5;706:7;:13;;:21;;;;749:5;733:7;:13;;:21;;;;780:15;760:7;:17;;:35;;;;823:4;801:7;:19;;;:26;;;;;;;;;;;;;;;;;;852:10;839:73;864:10;876:5;883;890:15;907:4;839:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;430:487;;;;;:::o;260:20:1:-;;;;;;;;;;;;;:::o;1034:245:0:-;1103:7;1111;1119;1127;1152:12;:20;1165:6;1152:20;;;;;;;;;;;:31;;;1186:12;:20;1199:6;1186:20;;;;;;;;;;;:26;;;1214:12;:20;1227:6;1214:20;;;;;;;;;;;:26;;;1242:12;:20;1255:6;1242:20;;;;;;;;;;;:30;;;1142:132;;;;;;;;1034:245;;;;;:::o;456:123:1:-;399:5;;;;;;;;;;;385:19;;:10;:19;;;381:38;;;552:1;532:22;;:8;:22;;;528:44;;564:8;556:5;;:16;;;;;;;;;;;;;;;;;;528:44;381:38;456:123;:::o",
-  "source": "pragma solidity >=0.4.21 <0.7.0;\n\nimport './Ownable.sol';\n\ncontract Bookchain is Ownable {\n\n  struct Book {\n    bytes32 recordHash;\n    bytes32 authorName;\n    bytes32 title;\n    bytes32 email;\n    uint timestamp;\n    bool isDocExists;\n  }\n\n  mapping(bytes32 => Book) public documentdata;\n\n  event _NewBookAuth(bytes32 indexed recordHash, bytes32 authorName, bytes32 title, bytes32 email, uint256 timestamp, bool isDocExists);\n\n  function authNewBook(bytes32 recordHash, bytes32 authorName, bytes32 title, bytes32 email) external {\n\n    require(recordHash != \"\");\n\n    Bookchain.Book storage docdata = documentdata[recordHash];\n    docdata.recordHash = recordHash;\n    docdata.authorName = authorName;\n    docdata.title = title;\n    docdata.email = email;\n    docdata.timestamp = block.timestamp;\n    docdata.isDocExists = true;\n\n    emit _NewBookAuth(recordHash, authorName, title, email, block.timestamp, true);\n  }\n\n\n  function exists(bytes32 record) view public returns(bool) {\n    return documentdata[record].isDocExists;\n  }\n\n  function getBookDetailFromHash(bytes32 record) view public returns ( bytes32,bytes32,bytes32,uint256) {\n    return  ( documentdata[record].authorName , documentdata[record].title, documentdata[record].email, documentdata[record].timestamp );\n  }\n\n}",
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"recordHash\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"authorName\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"title\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"email\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isDocExists\",\"type\":\"bool\"}],\"name\":\"_NewBookAuth\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"recordHash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"authorName\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"title\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"email\",\"type\":\"bytes32\"}],\"name\":\"authNewBook\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"documentdata\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"recordHash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"authorName\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"title\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"email\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isDocExists\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"record\",\"type\":\"bytes32\"}],\"name\":\"exists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"record\",\"type\":\"bytes32\"}],\"name\":\"getBookDetailFromHash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Bookchain.sol\":\"Bookchain\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Bookchain.sol\":{\"keccak256\":\"0x8e592822709028d63c623ccdf4bdbe2eed8ba87bc28741cf0bdb7d1e23617379\",\"urls\":[\"bzz-raw://73cc9e3704295b73ea6e2044223f3ffff1c73c09a4c2061b16c2889fa65ac969\",\"dweb:/ipfs/QmcETNVXAUMPkmWEgpNQBeb7GxYZCm3tADBQ3CUwwgmZMv\"]},\"project:/contracts/Ownable.sol\":{\"keccak256\":\"0x9f06ed20fd29228294f4a82577d082adf688aea114848fd6fd28751c2d207a59\",\"urls\":[\"bzz-raw://6afa789e6750385e4839e209405ebd3da17f622a8495341dec439c38ec89de64\",\"dweb:/ipfs/QmPeGM7xgtpEEoHKx3kZbBpk8B5GmQLM8SSh4M6TYt5G3U\"]}},\"version\":1}",
+  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610529806100536000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c806338a699a4146100675780636408609f146100ad578063843e8d8a146101165780638da5cb5b14610162578063a5fb921f146101ac578063f2fde38b14610203575b600080fd5b6100936004803603602081101561007d57600080fd5b8101908080359060200190929190505050610247565b604051808215151515815260200191505060405180910390f35b6100d9600480360360208110156100c357600080fd5b8101908080359060200190929190505050610274565b6040518087815260200186815260200185815260200184815260200183815260200182151515158152602001965050505050505060405180910390f35b6101606004803603608081101561012c57600080fd5b81019080803590602001909291908035906020019092919080359060200190929190803590602001909291905050506102bd565b005b61016a610390565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101d8600480360360208110156101c257600080fd5b81019080803590602001909291905050506103b5565b6040518085815260200184815260200183815260200182815260200194505050505060405180910390f35b6102456004803603602081101561021957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610426565b005b60006001600083815260200190815260200160002060050160009054906101000a900460ff169050919050565b60016020528060005260406000206000915090508060000154908060010154908060020154908060030154908060040154908060050160009054906101000a900460ff16905086565b60008414156102cb57600080fd5b600060016000868152602001908152602001600020905084816000018190555083816001018190555082816002018190555081816003018190555042816004018190555060018160050160006101000a81548160ff021916908315150217905550847fc481bb149c66d56208c028a621fc4acbda596275d25ca429dc73edf59bb1ae6b85858542600160405180868152602001858152602001848152602001838152602001821515151581526020019550505050505060405180910390a25050505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080600080600160008681526020019081526020016000206001015460016000878152602001908152602001600020600201546001600088815260200190815260200160002060030154600160008981526020019081526020016000206004015493509350935093509193509193565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156104f157600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16146104f057806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b5b5056fea265627a7a72315820d51fefd7bb3cc871180beb856499f55c49170e4b95a103a4ab5495b66db46f9964736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c806338a699a4146100675780636408609f146100ad578063843e8d8a146101165780638da5cb5b14610162578063a5fb921f146101ac578063f2fde38b14610203575b600080fd5b6100936004803603602081101561007d57600080fd5b8101908080359060200190929190505050610247565b604051808215151515815260200191505060405180910390f35b6100d9600480360360208110156100c357600080fd5b8101908080359060200190929190505050610274565b6040518087815260200186815260200185815260200184815260200183815260200182151515158152602001965050505050505060405180910390f35b6101606004803603608081101561012c57600080fd5b81019080803590602001909291908035906020019092919080359060200190929190803590602001909291905050506102bd565b005b61016a610390565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101d8600480360360208110156101c257600080fd5b81019080803590602001909291905050506103b5565b6040518085815260200184815260200183815260200182815260200194505050505060405180910390f35b6102456004803603602081101561021957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610426565b005b60006001600083815260200190815260200160002060050160009054906101000a900460ff169050919050565b60016020528060005260406000206000915090508060000154908060010154908060020154908060030154908060040154908060050160009054906101000a900460ff16905086565b60008414156102cb57600080fd5b600060016000868152602001908152602001600020905084816000018190555083816001018190555082816002018190555081816003018190555042816004018190555060018160050160006101000a81548160ff021916908315150217905550847fc481bb149c66d56208c028a621fc4acbda596275d25ca429dc73edf59bb1ae6b85858542600160405180868152602001858152602001848152602001838152602001821515151581526020019550505050505060405180910390a25050505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080600080600160008681526020019081526020016000206001015460016000878152602001908152602001600020600201546001600088815260200190815260200160002060030154600160008981526020019081526020016000206004015493509350935093509193509193565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156104f157600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16146104f057806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b5b5056fea265627a7a72315820d51fefd7bb3cc871180beb856499f55c49170e4b95a103a4ab5495b66db46f9964736f6c63430005100032",
+  "sourceMap": "59:1230:0:-;;;326:10:1;318:5;;:18;;;;;;;;;;;;;;;;;;59:1230:0;;;;;;",
+  "deployedSourceMap": "59:1230:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:1230:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;929:108;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;929:108:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;243:44;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;243:44:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;430:494;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;430:494:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;260:20:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1041:245:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1041:245:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;456:123:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;456:123:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;929:108:0;981:4;1000:12;:20;1013:6;1000:20;;;;;;;;;;;:32;;;;;;;;;;;;993:39;;929:108;;;:::o;243:44::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;430:494::-;545:16;:10;:16;;537:25;;;;;;569:31;603:12;:24;616:10;603:24;;;;;;;;;;;569:58;;655:10;633:8;:19;;:32;;;;693:10;671:8;:19;;:32;;;;726:5;709:8;:14;;:22;;;;754:5;737:8;:14;;:22;;;;786:15;765:8;:18;;:36;;;;830:4;807:8;:20;;;:27;;;;;;;;;;;;;;;;;;859:10;846:73;871:10;883:5;890;897:15;914:4;846:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;430:494;;;;;:::o;260:20:1:-;;;;;;;;;;;;;:::o;1041:245:0:-;1110:7;1118;1126;1134;1159:12;:20;1172:6;1159:20;;;;;;;;;;;:31;;;1193:12;:20;1206:6;1193:20;;;;;;;;;;;:26;;;1221:12;:20;1234:6;1221:20;;;;;;;;;;;:26;;;1249:12;:20;1262:6;1249:20;;;;;;;;;;;:30;;;1149:132;;;;;;;;1041:245;;;;;:::o;456:123:1:-;399:5;;;;;;;;;;;385:19;;:10;:19;;;381:38;;;552:1;532:22;;:8;:22;;;528:44;;564:8;556:5;;:16;;;;;;;;;;;;;;;;;;528:44;381:38;456:123;:::o",
+  "source": "pragma solidity >=0.4.21 <0.7.0;\n\nimport './Ownable.sol';\n\ncontract Bookchain is Ownable {\n\n  struct Book {\n    bytes32 recordHash;\n    bytes32 authorName;\n    bytes32 title;\n    bytes32 email;\n    uint timestamp;\n    bool isDocExists;\n  }\n\n  mapping(bytes32 => Book) public documentdata;\n\n  event _NewBookAuth(bytes32 indexed recordHash, bytes32 authorName, bytes32 title, bytes32 email, uint256 timestamp, bool isDocExists);\n\n  function authNewBook(bytes32 recordHash, bytes32 authorName, bytes32 title, bytes32 email) external {\n\n    require(recordHash != \"\");\n\n    Bookchain.Book storage bookdata = documentdata[recordHash];\n    bookdata.recordHash = recordHash;\n    bookdata.authorName = authorName;\n    bookdata.title = title;\n    bookdata.email = email;\n    bookdata.timestamp = block.timestamp;\n    bookdata.isDocExists = true;\n\n    emit _NewBookAuth(recordHash, authorName, title, email, block.timestamp, true);\n  }\n\n\n  function exists(bytes32 record) view public returns(bool) {\n    return documentdata[record].isDocExists;\n  }\n\n  function getBookDetailFromHash(bytes32 record) view public returns ( bytes32,bytes32,bytes32,uint256) {\n    return  ( documentdata[record].authorName , documentdata[record].title, documentdata[record].email, documentdata[record].timestamp );\n  }\n\n}",
   "sourcePath": "/home/ansnoussi/Desktop/BookChain/contracts/Bookchain.sol",
   "ast": {
     "absolutePath": "project:/contracts/Bookchain.sol",
@@ -680,7 +680,7 @@
             "body": {
               "id": 107,
               "nodeType": "Block",
-              "src": "530:387:0",
+              "src": "530:394:0",
               "statements": [
                 {
                   "expression": {
@@ -784,10 +784,10 @@
                     {
                       "constant": false,
                       "id": 55,
-                      "name": "docdata",
+                      "name": "bookdata",
                       "nodeType": "VariableDeclaration",
                       "scope": 107,
-                      "src": "569:30:0",
+                      "src": "569:31:0",
                       "stateVariable": false,
                       "storageLocation": "storage",
                       "typeDescriptions": {
@@ -820,7 +820,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 21,
-                      "src": "602:12:0",
+                      "src": "603:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
                         "typeString": "mapping(bytes32 => struct Bookchain.Book storage ref)"
@@ -834,7 +834,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 37,
-                      "src": "615:10:0",
+                      "src": "616:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
@@ -845,14 +845,14 @@
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "IndexAccess",
-                    "src": "602:24:0",
+                    "src": "603:24:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_struct$_Book_$17_storage",
                       "typeString": "struct Bookchain.Book storage ref"
                     }
                   },
                   "nodeType": "VariableDeclarationStatement",
-                  "src": "569:57:0"
+                  "src": "569:58:0"
                 },
                 {
                   "expression": {
@@ -867,11 +867,11 @@
                       "expression": {
                         "argumentTypes": null,
                         "id": 60,
-                        "name": "docdata",
+                        "name": "bookdata",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 55,
-                        "src": "632:7:0",
+                        "src": "633:8:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
                           "typeString": "struct Bookchain.Book storage pointer"
@@ -885,7 +885,7 @@
                       "memberName": "recordHash",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 6,
-                      "src": "632:18:0",
+                      "src": "633:19:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
@@ -900,13 +900,13 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 37,
-                      "src": "653:10:0",
+                      "src": "655:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
                       }
                     },
-                    "src": "632:31:0",
+                    "src": "633:32:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -914,7 +914,7 @@
                   },
                   "id": 65,
                   "nodeType": "ExpressionStatement",
-                  "src": "632:31:0"
+                  "src": "633:32:0"
                 },
                 {
                   "expression": {
@@ -929,11 +929,11 @@
                       "expression": {
                         "argumentTypes": null,
                         "id": 66,
-                        "name": "docdata",
+                        "name": "bookdata",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 55,
-                        "src": "669:7:0",
+                        "src": "671:8:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
                           "typeString": "struct Bookchain.Book storage pointer"
@@ -947,7 +947,7 @@
                       "memberName": "authorName",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 8,
-                      "src": "669:18:0",
+                      "src": "671:19:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
@@ -962,13 +962,13 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 39,
-                      "src": "690:10:0",
+                      "src": "693:10:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
                       }
                     },
-                    "src": "669:31:0",
+                    "src": "671:32:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -976,7 +976,7 @@
                   },
                   "id": 71,
                   "nodeType": "ExpressionStatement",
-                  "src": "669:31:0"
+                  "src": "671:32:0"
                 },
                 {
                   "expression": {
@@ -991,11 +991,11 @@
                       "expression": {
                         "argumentTypes": null,
                         "id": 72,
-                        "name": "docdata",
+                        "name": "bookdata",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 55,
-                        "src": "706:7:0",
+                        "src": "709:8:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
                           "typeString": "struct Bookchain.Book storage pointer"
@@ -1009,7 +1009,7 @@
                       "memberName": "title",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 10,
-                      "src": "706:13:0",
+                      "src": "709:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
@@ -1024,13 +1024,13 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 41,
-                      "src": "722:5:0",
+                      "src": "726:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
                       }
                     },
-                    "src": "706:21:0",
+                    "src": "709:22:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1038,7 +1038,7 @@
                   },
                   "id": 77,
                   "nodeType": "ExpressionStatement",
-                  "src": "706:21:0"
+                  "src": "709:22:0"
                 },
                 {
                   "expression": {
@@ -1053,11 +1053,11 @@
                       "expression": {
                         "argumentTypes": null,
                         "id": 78,
-                        "name": "docdata",
+                        "name": "bookdata",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 55,
-                        "src": "733:7:0",
+                        "src": "737:8:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
                           "typeString": "struct Bookchain.Book storage pointer"
@@ -1071,7 +1071,7 @@
                       "memberName": "email",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 12,
-                      "src": "733:13:0",
+                      "src": "737:14:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
@@ -1086,13 +1086,13 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 43,
-                      "src": "749:5:0",
+                      "src": "754:5:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bytes32",
                         "typeString": "bytes32"
                       }
                     },
-                    "src": "733:21:0",
+                    "src": "737:22:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1100,7 +1100,7 @@
                   },
                   "id": 83,
                   "nodeType": "ExpressionStatement",
-                  "src": "733:21:0"
+                  "src": "737:22:0"
                 },
                 {
                   "expression": {
@@ -1115,11 +1115,11 @@
                       "expression": {
                         "argumentTypes": null,
                         "id": 84,
-                        "name": "docdata",
+                        "name": "bookdata",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 55,
-                        "src": "760:7:0",
+                        "src": "765:8:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
                           "typeString": "struct Bookchain.Book storage pointer"
@@ -1133,7 +1133,7 @@
                       "memberName": "timestamp",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 14,
-                      "src": "760:17:0",
+                      "src": "765:18:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
@@ -1150,7 +1150,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 200,
-                        "src": "780:5:0",
+                        "src": "786:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_magic_block",
                           "typeString": "block"
@@ -1164,13 +1164,13 @@
                       "memberName": "timestamp",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": null,
-                      "src": "780:15:0",
+                      "src": "786:15:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_uint256",
                         "typeString": "uint256"
                       }
                     },
-                    "src": "760:35:0",
+                    "src": "765:36:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -1178,7 +1178,7 @@
                   },
                   "id": 90,
                   "nodeType": "ExpressionStatement",
-                  "src": "760:35:0"
+                  "src": "765:36:0"
                 },
                 {
                   "expression": {
@@ -1193,11 +1193,11 @@
                       "expression": {
                         "argumentTypes": null,
                         "id": 91,
-                        "name": "docdata",
+                        "name": "bookdata",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 55,
-                        "src": "801:7:0",
+                        "src": "807:8:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
                           "typeString": "struct Bookchain.Book storage pointer"
@@ -1211,7 +1211,7 @@
                       "memberName": "isDocExists",
                       "nodeType": "MemberAccess",
                       "referencedDeclaration": 16,
-                      "src": "801:19:0",
+                      "src": "807:20:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
                         "typeString": "bool"
@@ -1229,7 +1229,7 @@
                       "kind": "bool",
                       "lValueRequested": false,
                       "nodeType": "Literal",
-                      "src": "823:4:0",
+                      "src": "830:4:0",
                       "subdenomination": null,
                       "typeDescriptions": {
                         "typeIdentifier": "t_bool",
@@ -1237,7 +1237,7 @@
                       },
                       "value": "true"
                     },
-                    "src": "801:26:0",
+                    "src": "807:27:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1245,7 +1245,7 @@
                   },
                   "id": 96,
                   "nodeType": "ExpressionStatement",
-                  "src": "801:26:0"
+                  "src": "807:27:0"
                 },
                 {
                   "eventCall": {
@@ -1258,7 +1258,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 37,
-                        "src": "852:10:0",
+                        "src": "859:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -1271,7 +1271,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 39,
-                        "src": "864:10:0",
+                        "src": "871:10:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -1284,7 +1284,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 41,
-                        "src": "876:5:0",
+                        "src": "883:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -1297,7 +1297,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 43,
-                        "src": "883:5:0",
+                        "src": "890:5:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -1312,7 +1312,7 @@
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
                           "referencedDeclaration": 200,
-                          "src": "890:5:0",
+                          "src": "897:5:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_magic_block",
                             "typeString": "block"
@@ -1326,7 +1326,7 @@
                         "memberName": "timestamp",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": null,
-                        "src": "890:15:0",
+                        "src": "897:15:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1342,7 +1342,7 @@
                         "kind": "bool",
                         "lValueRequested": false,
                         "nodeType": "Literal",
-                        "src": "907:4:0",
+                        "src": "914:4:0",
                         "subdenomination": null,
                         "typeDescriptions": {
                           "typeIdentifier": "t_bool",
@@ -1383,7 +1383,7 @@
                       "nodeType": "Identifier",
                       "overloadedDeclarations": [],
                       "referencedDeclaration": 35,
-                      "src": "839:12:0",
+                      "src": "846:12:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_function_event_nonpayable$_t_bytes32_$_t_bytes32_$_t_bytes32_$_t_bytes32_$_t_uint256_$_t_bool_$returns$__$",
                         "typeString": "function (bytes32,bytes32,bytes32,bytes32,uint256,bool)"
@@ -1397,7 +1397,7 @@
                     "lValueRequested": false,
                     "names": [],
                     "nodeType": "FunctionCall",
-                    "src": "839:73:0",
+                    "src": "846:73:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$__$",
                       "typeString": "tuple()"
@@ -1405,7 +1405,7 @@
                   },
                   "id": 106,
                   "nodeType": "EmitStatement",
-                  "src": "834:78:0"
+                  "src": "841:78:0"
                 }
               ]
             },
@@ -1534,7 +1534,7 @@
               "src": "530:0:0"
             },
             "scope": 154,
-            "src": "430:487:0",
+            "src": "430:494:0",
             "stateMutability": "nonpayable",
             "superFunction": null,
             "visibility": "external"
@@ -1543,7 +1543,7 @@
             "body": {
               "id": 120,
               "nodeType": "Block",
-              "src": "980:50:0",
+              "src": "987:50:0",
               "statements": [
                 {
                   "expression": {
@@ -1557,7 +1557,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 21,
-                        "src": "993:12:0",
+                        "src": "1000:12:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
                           "typeString": "mapping(bytes32 => struct Bookchain.Book storage ref)"
@@ -1571,7 +1571,7 @@
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 110,
-                        "src": "1006:6:0",
+                        "src": "1013:6:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -1582,7 +1582,7 @@
                       "isPure": false,
                       "lValueRequested": false,
                       "nodeType": "IndexAccess",
-                      "src": "993:20:0",
+                      "src": "1000:20:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_struct$_Book_$17_storage",
                         "typeString": "struct Bookchain.Book storage ref"
@@ -1596,7 +1596,7 @@
                     "memberName": "isDocExists",
                     "nodeType": "MemberAccess",
                     "referencedDeclaration": 16,
-                    "src": "993:32:0",
+                    "src": "1000:32:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1605,7 +1605,7 @@
                   "functionReturnParameters": 114,
                   "id": 119,
                   "nodeType": "Return",
-                  "src": "986:39:0"
+                  "src": "993:39:0"
                 }
               ]
             },
@@ -1626,7 +1626,7 @@
                   "name": "record",
                   "nodeType": "VariableDeclaration",
                   "scope": 121,
-                  "src": "938:14:0",
+                  "src": "945:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1637,7 +1637,7 @@
                     "id": 109,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "938:7:0",
+                    "src": "945:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1647,7 +1647,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "937:16:0"
+              "src": "944:16:0"
             },
             "returnParameters": {
               "id": 114,
@@ -1659,7 +1659,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 121,
-                  "src": "974:4:0",
+                  "src": "981:4:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1670,7 +1670,7 @@
                     "id": 112,
                     "name": "bool",
                     "nodeType": "ElementaryTypeName",
-                    "src": "974:4:0",
+                    "src": "981:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bool",
                       "typeString": "bool"
@@ -1680,10 +1680,10 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "973:6:0"
+              "src": "980:6:0"
             },
             "scope": 154,
-            "src": "922:108:0",
+            "src": "929:108:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
@@ -1692,7 +1692,7 @@
             "body": {
               "id": 152,
               "nodeType": "Block",
-              "src": "1136:143:0",
+              "src": "1143:143:0",
               "statements": [
                 {
                   "expression": {
@@ -1709,7 +1709,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 21,
-                            "src": "1152:12:0",
+                            "src": "1159:12:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
                               "typeString": "mapping(bytes32 => struct Bookchain.Book storage ref)"
@@ -1723,7 +1723,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 123,
-                            "src": "1165:6:0",
+                            "src": "1172:6:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes32",
                               "typeString": "bytes32"
@@ -1734,7 +1734,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1152:20:0",
+                          "src": "1159:20:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_Book_$17_storage",
                             "typeString": "struct Bookchain.Book storage ref"
@@ -1748,7 +1748,7 @@
                         "memberName": "authorName",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": 8,
-                        "src": "1152:31:0",
+                        "src": "1159:31:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -1765,7 +1765,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 21,
-                            "src": "1186:12:0",
+                            "src": "1193:12:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
                               "typeString": "mapping(bytes32 => struct Bookchain.Book storage ref)"
@@ -1779,7 +1779,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 123,
-                            "src": "1199:6:0",
+                            "src": "1206:6:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes32",
                               "typeString": "bytes32"
@@ -1790,7 +1790,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1186:20:0",
+                          "src": "1193:20:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_Book_$17_storage",
                             "typeString": "struct Bookchain.Book storage ref"
@@ -1804,7 +1804,7 @@
                         "memberName": "title",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": 10,
-                        "src": "1186:26:0",
+                        "src": "1193:26:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -1821,7 +1821,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 21,
-                            "src": "1214:12:0",
+                            "src": "1221:12:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
                               "typeString": "mapping(bytes32 => struct Bookchain.Book storage ref)"
@@ -1835,7 +1835,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 123,
-                            "src": "1227:6:0",
+                            "src": "1234:6:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes32",
                               "typeString": "bytes32"
@@ -1846,7 +1846,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1214:20:0",
+                          "src": "1221:20:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_Book_$17_storage",
                             "typeString": "struct Bookchain.Book storage ref"
@@ -1860,7 +1860,7 @@
                         "memberName": "email",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": 12,
-                        "src": "1214:26:0",
+                        "src": "1221:26:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_bytes32",
                           "typeString": "bytes32"
@@ -1877,7 +1877,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 21,
-                            "src": "1242:12:0",
+                            "src": "1249:12:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
                               "typeString": "mapping(bytes32 => struct Bookchain.Book storage ref)"
@@ -1891,7 +1891,7 @@
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
                             "referencedDeclaration": 123,
-                            "src": "1255:6:0",
+                            "src": "1262:6:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_bytes32",
                               "typeString": "bytes32"
@@ -1902,7 +1902,7 @@
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1242:20:0",
+                          "src": "1249:20:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_struct$_Book_$17_storage",
                             "typeString": "struct Bookchain.Book storage ref"
@@ -1916,7 +1916,7 @@
                         "memberName": "timestamp",
                         "nodeType": "MemberAccess",
                         "referencedDeclaration": 14,
-                        "src": "1242:30:0",
+                        "src": "1249:30:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
@@ -1930,7 +1930,7 @@
                     "isPure": false,
                     "lValueRequested": false,
                     "nodeType": "TupleExpression",
-                    "src": "1150:124:0",
+                    "src": "1157:124:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_tuple$_t_bytes32_$_t_bytes32_$_t_bytes32_$_t_uint256_$",
                       "typeString": "tuple(bytes32,bytes32,bytes32,uint256)"
@@ -1939,7 +1939,7 @@
                   "functionReturnParameters": 133,
                   "id": 151,
                   "nodeType": "Return",
-                  "src": "1142:132:0"
+                  "src": "1149:132:0"
                 }
               ]
             },
@@ -1960,7 +1960,7 @@
                   "name": "record",
                   "nodeType": "VariableDeclaration",
                   "scope": 153,
-                  "src": "1065:14:0",
+                  "src": "1072:14:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -1971,7 +1971,7 @@
                     "id": 122,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1065:7:0",
+                    "src": "1072:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -1981,7 +1981,7 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1064:16:0"
+              "src": "1071:16:0"
             },
             "returnParameters": {
               "id": 133,
@@ -1993,7 +1993,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 153,
-                  "src": "1103:7:0",
+                  "src": "1110:7:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2004,7 +2004,7 @@
                     "id": 125,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1103:7:0",
+                    "src": "1110:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2019,7 +2019,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 153,
-                  "src": "1111:7:0",
+                  "src": "1118:7:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2030,7 +2030,7 @@
                     "id": 127,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1111:7:0",
+                    "src": "1118:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2045,7 +2045,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 153,
-                  "src": "1119:7:0",
+                  "src": "1126:7:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2056,7 +2056,7 @@
                     "id": 129,
                     "name": "bytes32",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1119:7:0",
+                    "src": "1126:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_bytes32",
                       "typeString": "bytes32"
@@ -2071,7 +2071,7 @@
                   "name": "",
                   "nodeType": "VariableDeclaration",
                   "scope": 153,
-                  "src": "1127:7:0",
+                  "src": "1134:7:0",
                   "stateVariable": false,
                   "storageLocation": "default",
                   "typeDescriptions": {
@@ -2082,7 +2082,7 @@
                     "id": 131,
                     "name": "uint256",
                     "nodeType": "ElementaryTypeName",
-                    "src": "1127:7:0",
+                    "src": "1134:7:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
@@ -2092,20 +2092,20 @@
                   "visibility": "internal"
                 }
               ],
-              "src": "1101:34:0"
+              "src": "1108:34:0"
             },
             "scope": 154,
-            "src": "1034:245:0",
+            "src": "1041:245:0",
             "stateMutability": "view",
             "superFunction": null,
             "visibility": "public"
           }
         ],
         "scope": 155,
-        "src": "59:1223:0"
+        "src": "59:1230:0"
       }
     ],
-    "src": "0:1282:0"
+    "src": "0:1289:0"
   },
   "legacyAST": {
     "attributes": {
@@ -2830,7 +2830,7 @@
                       {
                         "attributes": {
                           "constant": false,
-                          "name": "docdata",
+                          "name": "bookdata",
                           "scope": 107,
                           "stateVariable": false,
                           "storageLocation": "storage",
@@ -2853,7 +2853,7 @@
                         ],
                         "id": 55,
                         "name": "VariableDeclaration",
-                        "src": "569:30:0"
+                        "src": "569:31:0"
                       },
                       {
                         "attributes": {
@@ -2877,7 +2877,7 @@
                             },
                             "id": 56,
                             "name": "Identifier",
-                            "src": "602:12:0"
+                            "src": "603:12:0"
                           },
                           {
                             "attributes": {
@@ -2891,17 +2891,17 @@
                             },
                             "id": 57,
                             "name": "Identifier",
-                            "src": "615:10:0"
+                            "src": "616:10:0"
                           }
                         ],
                         "id": 58,
                         "name": "IndexAccess",
-                        "src": "602:24:0"
+                        "src": "603:24:0"
                       }
                     ],
                     "id": 59,
                     "name": "VariableDeclarationStatement",
-                    "src": "569:57:0"
+                    "src": "569:58:0"
                   },
                   {
                     "children": [
@@ -2936,16 +2936,16 @@
                                   ],
                                   "referencedDeclaration": 55,
                                   "type": "struct Bookchain.Book storage pointer",
-                                  "value": "docdata"
+                                  "value": "bookdata"
                                 },
                                 "id": 60,
                                 "name": "Identifier",
-                                "src": "632:7:0"
+                                "src": "633:8:0"
                               }
                             ],
                             "id": 62,
                             "name": "MemberAccess",
-                            "src": "632:18:0"
+                            "src": "633:19:0"
                           },
                           {
                             "attributes": {
@@ -2959,17 +2959,17 @@
                             },
                             "id": 63,
                             "name": "Identifier",
-                            "src": "653:10:0"
+                            "src": "655:10:0"
                           }
                         ],
                         "id": 64,
                         "name": "Assignment",
-                        "src": "632:31:0"
+                        "src": "633:32:0"
                       }
                     ],
                     "id": 65,
                     "name": "ExpressionStatement",
-                    "src": "632:31:0"
+                    "src": "633:32:0"
                   },
                   {
                     "children": [
@@ -3004,16 +3004,16 @@
                                   ],
                                   "referencedDeclaration": 55,
                                   "type": "struct Bookchain.Book storage pointer",
-                                  "value": "docdata"
+                                  "value": "bookdata"
                                 },
                                 "id": 66,
                                 "name": "Identifier",
-                                "src": "669:7:0"
+                                "src": "671:8:0"
                               }
                             ],
                             "id": 68,
                             "name": "MemberAccess",
-                            "src": "669:18:0"
+                            "src": "671:19:0"
                           },
                           {
                             "attributes": {
@@ -3027,17 +3027,17 @@
                             },
                             "id": 69,
                             "name": "Identifier",
-                            "src": "690:10:0"
+                            "src": "693:10:0"
                           }
                         ],
                         "id": 70,
                         "name": "Assignment",
-                        "src": "669:31:0"
+                        "src": "671:32:0"
                       }
                     ],
                     "id": 71,
                     "name": "ExpressionStatement",
-                    "src": "669:31:0"
+                    "src": "671:32:0"
                   },
                   {
                     "children": [
@@ -3072,16 +3072,16 @@
                                   ],
                                   "referencedDeclaration": 55,
                                   "type": "struct Bookchain.Book storage pointer",
-                                  "value": "docdata"
+                                  "value": "bookdata"
                                 },
                                 "id": 72,
                                 "name": "Identifier",
-                                "src": "706:7:0"
+                                "src": "709:8:0"
                               }
                             ],
                             "id": 74,
                             "name": "MemberAccess",
-                            "src": "706:13:0"
+                            "src": "709:14:0"
                           },
                           {
                             "attributes": {
@@ -3095,17 +3095,17 @@
                             },
                             "id": 75,
                             "name": "Identifier",
-                            "src": "722:5:0"
+                            "src": "726:5:0"
                           }
                         ],
                         "id": 76,
                         "name": "Assignment",
-                        "src": "706:21:0"
+                        "src": "709:22:0"
                       }
                     ],
                     "id": 77,
                     "name": "ExpressionStatement",
-                    "src": "706:21:0"
+                    "src": "709:22:0"
                   },
                   {
                     "children": [
@@ -3140,16 +3140,16 @@
                                   ],
                                   "referencedDeclaration": 55,
                                   "type": "struct Bookchain.Book storage pointer",
-                                  "value": "docdata"
+                                  "value": "bookdata"
                                 },
                                 "id": 78,
                                 "name": "Identifier",
-                                "src": "733:7:0"
+                                "src": "737:8:0"
                               }
                             ],
                             "id": 80,
                             "name": "MemberAccess",
-                            "src": "733:13:0"
+                            "src": "737:14:0"
                           },
                           {
                             "attributes": {
@@ -3163,17 +3163,17 @@
                             },
                             "id": 81,
                             "name": "Identifier",
-                            "src": "749:5:0"
+                            "src": "754:5:0"
                           }
                         ],
                         "id": 82,
                         "name": "Assignment",
-                        "src": "733:21:0"
+                        "src": "737:22:0"
                       }
                     ],
                     "id": 83,
                     "name": "ExpressionStatement",
-                    "src": "733:21:0"
+                    "src": "737:22:0"
                   },
                   {
                     "children": [
@@ -3208,16 +3208,16 @@
                                   ],
                                   "referencedDeclaration": 55,
                                   "type": "struct Bookchain.Book storage pointer",
-                                  "value": "docdata"
+                                  "value": "bookdata"
                                 },
                                 "id": 84,
                                 "name": "Identifier",
-                                "src": "760:7:0"
+                                "src": "765:8:0"
                               }
                             ],
                             "id": 86,
                             "name": "MemberAccess",
-                            "src": "760:17:0"
+                            "src": "765:18:0"
                           },
                           {
                             "attributes": {
@@ -3243,22 +3243,22 @@
                                 },
                                 "id": 87,
                                 "name": "Identifier",
-                                "src": "780:5:0"
+                                "src": "786:5:0"
                               }
                             ],
                             "id": 88,
                             "name": "MemberAccess",
-                            "src": "780:15:0"
+                            "src": "786:15:0"
                           }
                         ],
                         "id": 89,
                         "name": "Assignment",
-                        "src": "760:35:0"
+                        "src": "765:36:0"
                       }
                     ],
                     "id": 90,
                     "name": "ExpressionStatement",
-                    "src": "760:35:0"
+                    "src": "765:36:0"
                   },
                   {
                     "children": [
@@ -3293,16 +3293,16 @@
                                   ],
                                   "referencedDeclaration": 55,
                                   "type": "struct Bookchain.Book storage pointer",
-                                  "value": "docdata"
+                                  "value": "bookdata"
                                 },
                                 "id": 91,
                                 "name": "Identifier",
-                                "src": "801:7:0"
+                                "src": "807:8:0"
                               }
                             ],
                             "id": 93,
                             "name": "MemberAccess",
-                            "src": "801:19:0"
+                            "src": "807:20:0"
                           },
                           {
                             "attributes": {
@@ -3319,17 +3319,17 @@
                             },
                             "id": 94,
                             "name": "Literal",
-                            "src": "823:4:0"
+                            "src": "830:4:0"
                           }
                         ],
                         "id": 95,
                         "name": "Assignment",
-                        "src": "801:26:0"
+                        "src": "807:27:0"
                       }
                     ],
                     "id": 96,
                     "name": "ExpressionStatement",
-                    "src": "801:26:0"
+                    "src": "807:27:0"
                   },
                   {
                     "children": [
@@ -3385,7 +3385,7 @@
                             },
                             "id": 97,
                             "name": "Identifier",
-                            "src": "839:12:0"
+                            "src": "846:12:0"
                           },
                           {
                             "attributes": {
@@ -3399,7 +3399,7 @@
                             },
                             "id": 98,
                             "name": "Identifier",
-                            "src": "852:10:0"
+                            "src": "859:10:0"
                           },
                           {
                             "attributes": {
@@ -3413,7 +3413,7 @@
                             },
                             "id": 99,
                             "name": "Identifier",
-                            "src": "864:10:0"
+                            "src": "871:10:0"
                           },
                           {
                             "attributes": {
@@ -3427,7 +3427,7 @@
                             },
                             "id": 100,
                             "name": "Identifier",
-                            "src": "876:5:0"
+                            "src": "883:5:0"
                           },
                           {
                             "attributes": {
@@ -3441,7 +3441,7 @@
                             },
                             "id": 101,
                             "name": "Identifier",
-                            "src": "883:5:0"
+                            "src": "890:5:0"
                           },
                           {
                             "attributes": {
@@ -3467,12 +3467,12 @@
                                 },
                                 "id": 102,
                                 "name": "Identifier",
-                                "src": "890:5:0"
+                                "src": "897:5:0"
                               }
                             ],
                             "id": 103,
                             "name": "MemberAccess",
-                            "src": "890:15:0"
+                            "src": "897:15:0"
                           },
                           {
                             "attributes": {
@@ -3489,27 +3489,27 @@
                             },
                             "id": 104,
                             "name": "Literal",
-                            "src": "907:4:0"
+                            "src": "914:4:0"
                           }
                         ],
                         "id": 105,
                         "name": "FunctionCall",
-                        "src": "839:73:0"
+                        "src": "846:73:0"
                       }
                     ],
                     "id": 106,
                     "name": "EmitStatement",
-                    "src": "834:78:0"
+                    "src": "841:78:0"
                   }
                 ],
                 "id": 107,
                 "name": "Block",
-                "src": "530:387:0"
+                "src": "530:394:0"
               }
             ],
             "id": 108,
             "name": "FunctionDefinition",
-            "src": "430:487:0"
+            "src": "430:494:0"
           },
           {
             "attributes": {
@@ -3548,17 +3548,17 @@
                         },
                         "id": 109,
                         "name": "ElementaryTypeName",
-                        "src": "938:7:0"
+                        "src": "945:7:0"
                       }
                     ],
                     "id": 110,
                     "name": "VariableDeclaration",
-                    "src": "938:14:0"
+                    "src": "945:14:0"
                   }
                 ],
                 "id": 111,
                 "name": "ParameterList",
-                "src": "937:16:0"
+                "src": "944:16:0"
               },
               {
                 "children": [
@@ -3581,17 +3581,17 @@
                         },
                         "id": 112,
                         "name": "ElementaryTypeName",
-                        "src": "974:4:0"
+                        "src": "981:4:0"
                       }
                     ],
                     "id": 113,
                     "name": "VariableDeclaration",
-                    "src": "974:4:0"
+                    "src": "981:4:0"
                   }
                 ],
                 "id": 114,
                 "name": "ParameterList",
-                "src": "973:6:0"
+                "src": "980:6:0"
               },
               {
                 "children": [
@@ -3634,7 +3634,7 @@
                                 },
                                 "id": 115,
                                 "name": "Identifier",
-                                "src": "993:12:0"
+                                "src": "1000:12:0"
                               },
                               {
                                 "attributes": {
@@ -3648,32 +3648,32 @@
                                 },
                                 "id": 116,
                                 "name": "Identifier",
-                                "src": "1006:6:0"
+                                "src": "1013:6:0"
                               }
                             ],
                             "id": 117,
                             "name": "IndexAccess",
-                            "src": "993:20:0"
+                            "src": "1000:20:0"
                           }
                         ],
                         "id": 118,
                         "name": "MemberAccess",
-                        "src": "993:32:0"
+                        "src": "1000:32:0"
                       }
                     ],
                     "id": 119,
                     "name": "Return",
-                    "src": "986:39:0"
+                    "src": "993:39:0"
                   }
                 ],
                 "id": 120,
                 "name": "Block",
-                "src": "980:50:0"
+                "src": "987:50:0"
               }
             ],
             "id": 121,
             "name": "FunctionDefinition",
-            "src": "922:108:0"
+            "src": "929:108:0"
           },
           {
             "attributes": {
@@ -3712,17 +3712,17 @@
                         },
                         "id": 122,
                         "name": "ElementaryTypeName",
-                        "src": "1065:7:0"
+                        "src": "1072:7:0"
                       }
                     ],
                     "id": 123,
                     "name": "VariableDeclaration",
-                    "src": "1065:14:0"
+                    "src": "1072:14:0"
                   }
                 ],
                 "id": 124,
                 "name": "ParameterList",
-                "src": "1064:16:0"
+                "src": "1071:16:0"
               },
               {
                 "children": [
@@ -3745,12 +3745,12 @@
                         },
                         "id": 125,
                         "name": "ElementaryTypeName",
-                        "src": "1103:7:0"
+                        "src": "1110:7:0"
                       }
                     ],
                     "id": 126,
                     "name": "VariableDeclaration",
-                    "src": "1103:7:0"
+                    "src": "1110:7:0"
                   },
                   {
                     "attributes": {
@@ -3771,12 +3771,12 @@
                         },
                         "id": 127,
                         "name": "ElementaryTypeName",
-                        "src": "1111:7:0"
+                        "src": "1118:7:0"
                       }
                     ],
                     "id": 128,
                     "name": "VariableDeclaration",
-                    "src": "1111:7:0"
+                    "src": "1118:7:0"
                   },
                   {
                     "attributes": {
@@ -3797,12 +3797,12 @@
                         },
                         "id": 129,
                         "name": "ElementaryTypeName",
-                        "src": "1119:7:0"
+                        "src": "1126:7:0"
                       }
                     ],
                     "id": 130,
                     "name": "VariableDeclaration",
-                    "src": "1119:7:0"
+                    "src": "1126:7:0"
                   },
                   {
                     "attributes": {
@@ -3823,17 +3823,17 @@
                         },
                         "id": 131,
                         "name": "ElementaryTypeName",
-                        "src": "1127:7:0"
+                        "src": "1134:7:0"
                       }
                     ],
                     "id": 132,
                     "name": "VariableDeclaration",
-                    "src": "1127:7:0"
+                    "src": "1134:7:0"
                   }
                 ],
                 "id": 133,
                 "name": "ParameterList",
-                "src": "1101:34:0"
+                "src": "1108:34:0"
               },
               {
                 "children": [
@@ -3887,7 +3887,7 @@
                                     },
                                     "id": 134,
                                     "name": "Identifier",
-                                    "src": "1152:12:0"
+                                    "src": "1159:12:0"
                                   },
                                   {
                                     "attributes": {
@@ -3901,17 +3901,17 @@
                                     },
                                     "id": 135,
                                     "name": "Identifier",
-                                    "src": "1165:6:0"
+                                    "src": "1172:6:0"
                                   }
                                 ],
                                 "id": 136,
                                 "name": "IndexAccess",
-                                "src": "1152:20:0"
+                                "src": "1159:20:0"
                               }
                             ],
                             "id": 137,
                             "name": "MemberAccess",
-                            "src": "1152:31:0"
+                            "src": "1159:31:0"
                           },
                           {
                             "attributes": {
@@ -3947,7 +3947,7 @@
                                     },
                                     "id": 138,
                                     "name": "Identifier",
-                                    "src": "1186:12:0"
+                                    "src": "1193:12:0"
                                   },
                                   {
                                     "attributes": {
@@ -3961,17 +3961,17 @@
                                     },
                                     "id": 139,
                                     "name": "Identifier",
-                                    "src": "1199:6:0"
+                                    "src": "1206:6:0"
                                   }
                                 ],
                                 "id": 140,
                                 "name": "IndexAccess",
-                                "src": "1186:20:0"
+                                "src": "1193:20:0"
                               }
                             ],
                             "id": 141,
                             "name": "MemberAccess",
-                            "src": "1186:26:0"
+                            "src": "1193:26:0"
                           },
                           {
                             "attributes": {
@@ -4007,7 +4007,7 @@
                                     },
                                     "id": 142,
                                     "name": "Identifier",
-                                    "src": "1214:12:0"
+                                    "src": "1221:12:0"
                                   },
                                   {
                                     "attributes": {
@@ -4021,17 +4021,17 @@
                                     },
                                     "id": 143,
                                     "name": "Identifier",
-                                    "src": "1227:6:0"
+                                    "src": "1234:6:0"
                                   }
                                 ],
                                 "id": 144,
                                 "name": "IndexAccess",
-                                "src": "1214:20:0"
+                                "src": "1221:20:0"
                               }
                             ],
                             "id": 145,
                             "name": "MemberAccess",
-                            "src": "1214:26:0"
+                            "src": "1221:26:0"
                           },
                           {
                             "attributes": {
@@ -4067,7 +4067,7 @@
                                     },
                                     "id": 146,
                                     "name": "Identifier",
-                                    "src": "1242:12:0"
+                                    "src": "1249:12:0"
                                   },
                                   {
                                     "attributes": {
@@ -4081,47 +4081,47 @@
                                     },
                                     "id": 147,
                                     "name": "Identifier",
-                                    "src": "1255:6:0"
+                                    "src": "1262:6:0"
                                   }
                                 ],
                                 "id": 148,
                                 "name": "IndexAccess",
-                                "src": "1242:20:0"
+                                "src": "1249:20:0"
                               }
                             ],
                             "id": 149,
                             "name": "MemberAccess",
-                            "src": "1242:30:0"
+                            "src": "1249:30:0"
                           }
                         ],
                         "id": 150,
                         "name": "TupleExpression",
-                        "src": "1150:124:0"
+                        "src": "1157:124:0"
                       }
                     ],
                     "id": 151,
                     "name": "Return",
-                    "src": "1142:132:0"
+                    "src": "1149:132:0"
                   }
                 ],
                 "id": 152,
                 "name": "Block",
-                "src": "1136:143:0"
+                "src": "1143:143:0"
               }
             ],
             "id": 153,
             "name": "FunctionDefinition",
-            "src": "1034:245:0"
+            "src": "1041:245:0"
           }
         ],
         "id": 154,
         "name": "ContractDefinition",
-        "src": "59:1223:0"
+        "src": "59:1230:0"
       }
     ],
     "id": 155,
     "name": "SourceUnit",
-    "src": "0:1282:0"
+    "src": "0:1289:0"
   },
   "compiler": {
     "name": "solc",
@@ -4129,7 +4129,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.1",
-  "updatedAt": "2021-09-22T01:03:02.756Z",
+  "updatedAt": "2021-09-22T10:40:44.559Z",
   "devdoc": {
     "methods": {}
   },
