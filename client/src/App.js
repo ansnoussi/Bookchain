@@ -4,6 +4,7 @@ import getWeb3 from "./getWeb3";
 
 import "./App.css";
 
+var md5 = require("md5");
 const newEmptyBook = {
   recordHash: "",
   authorName: "",
@@ -71,14 +72,39 @@ class App extends Component {
     this.setState({ storageValue: response });
   };
 
+  onNewFileChange = (e) => {
+    let recordHash = md5(e.target.files[0]);
+    this.setState((oldState) => ({
+      ...oldState,
+      newBook: {
+        ...oldState.newBook,
+        recordHash: recordHash,
+      },
+    }));
+  };
+
+  onFetchFileChange = (e) => {
+    let recordHash = md5(e.target.files[0]);
+    this.setState((oldState) => ({
+      ...oldState,
+      fetchedBookHash: recordHash,
+    }));
+  };
+
+  // FINAL FUNCS
+
   submitNewBook = (e) => {
     e.preventDefault();
     this.setState({ status: "DONE" });
-    console.log(this.state);
+    console.log(this.state.newBook);
   };
 
-  onNewFileChange = (e) => {
-    console.log(e.target.files[0]);
+  fetchBook = (e) => {
+    e.preventDefault();
+    this.setState({
+      bookDetails: { authorName: "test1", title: "test2", email: "title3" },
+    });
+    console.log(this.state.fetchedBookHash);
   };
 
   render() {
@@ -111,7 +137,11 @@ class App extends Component {
               <label>
                 Hash <small>The hash of the document</small>
               </label>
-              <input type="text" readOnly />
+              <input
+                type="text"
+                readOnly
+                value={this.state.newBook.recordHash}
+              />
             </div>
             <div>
               <label>Author Name</label>
@@ -179,16 +209,18 @@ class App extends Component {
               Pick a document to display its details from the Blockchain
             </div>
             <div>
-              <input type="file" />
+              <input type="file" onChange={this.onFetchFileChange} />
             </div>
             <div>
               <label>
                 Hash <small>The hash of the document</small>
               </label>
-              <input readOnly type="text" />
+              <input readOnly type="text" value={this.state.fetchedBookHash} />
             </div>
             <div>
-              <button>Get Doc Details from Bookchain</button>
+              <button onClick={this.fetchBook}>
+                Get Doc Details from Bookchain
+              </button>
             </div>
 
             {this.state.bookDetails && (
@@ -200,11 +232,6 @@ class App extends Component {
                 </ul>
               </div>
             )}
-          </form>
-          {/* DEBUG */}
-          <form>
-            <div> DEBUG </div>
-            <div> Storage value : {this.state.storageValue} </div>
           </form>
         </div>
       </div>
