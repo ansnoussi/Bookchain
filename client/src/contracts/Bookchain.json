@@ -1,0 +1,4139 @@
+{
+  "contractName": "Bookchain",
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "bytes32",
+          "name": "recordHash",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "authorName",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "title",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "bytes32",
+          "name": "email",
+          "type": "bytes32"
+        },
+        {
+          "indexed": false,
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "isDocExists",
+          "type": "bool"
+        }
+      ],
+      "name": "_NewBookAuth",
+      "type": "event"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        }
+      ],
+      "name": "documentdata",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "recordHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "authorName",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "title",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "email",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "timestamp",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bool",
+          "name": "isDocExists",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "transferOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "recordHash",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "authorName",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "title",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "email",
+          "type": "bytes32"
+        }
+      ],
+      "name": "authNewBook",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "record",
+          "type": "bytes32"
+        }
+      ],
+      "name": "exists",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "record",
+          "type": "bytes32"
+        }
+      ],
+      "name": "getBookDetailFromHash",
+      "outputs": [
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"bytes32\",\"name\":\"recordHash\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"authorName\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"title\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"bytes32\",\"name\":\"email\",\"type\":\"bytes32\"},{\"indexed\":false,\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"isDocExists\",\"type\":\"bool\"}],\"name\":\"_NewBookAuth\",\"type\":\"event\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"recordHash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"authorName\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"title\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"email\",\"type\":\"bytes32\"}],\"name\":\"authNewBook\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"}],\"name\":\"documentdata\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"recordHash\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"authorName\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"title\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"email\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"timestamp\",\"type\":\"uint256\"},{\"internalType\":\"bool\",\"name\":\"isDocExists\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"record\",\"type\":\"bytes32\"}],\"name\":\"exists\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"internalType\":\"bytes32\",\"name\":\"record\",\"type\":\"bytes32\"}],\"name\":\"getBookDetailFromHash\",\"outputs\":[{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"bytes32\",\"name\":\"\",\"type\":\"bytes32\"},{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"owner\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"internalType\":\"address\",\"name\":\"newOwner\",\"type\":\"address\"}],\"name\":\"transferOwnership\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/Bookchain.sol\":\"Bookchain\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/Bookchain.sol\":{\"keccak256\":\"0xdde5c2c091ce80db6decbb59d15d90dfa13a71168c66bff943f1817ce96d155a\",\"urls\":[\"bzz-raw://ca0901dff773f7f659df628a0ca8c7f65da3134b3d66c036d3e9cf3628a1de87\",\"dweb:/ipfs/QmPLpDCRmBe9RMXyukuVJeqWeSfsdbpiShsMPneycNBzqH\"]},\"project:/contracts/Ownable.sol\":{\"keccak256\":\"0x9f06ed20fd29228294f4a82577d082adf688aea114848fd6fd28751c2d207a59\",\"urls\":[\"bzz-raw://6afa789e6750385e4839e209405ebd3da17f622a8495341dec439c38ec89de64\",\"dweb:/ipfs/QmPeGM7xgtpEEoHKx3kZbBpk8B5GmQLM8SSh4M6TYt5G3U\"]}},\"version\":1}",
+  "bytecode": "0x6080604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610529806100536000396000f3fe608060405234801561001057600080fd5b50600436106100625760003560e01c806338a699a4146100675780636408609f146100ad578063843e8d8a146101165780638da5cb5b14610162578063a5fb921f146101ac578063f2fde38b14610203575b600080fd5b6100936004803603602081101561007d57600080fd5b8101908080359060200190929190505050610247565b604051808215151515815260200191505060405180910390f35b6100d9600480360360208110156100c357600080fd5b8101908080359060200190929190505050610274565b6040518087815260200186815260200185815260200184815260200183815260200182151515158152602001965050505050505060405180910390f35b6101606004803603608081101561012c57600080fd5b81019080803590602001909291908035906020019092919080359060200190929190803590602001909291905050506102bd565b005b61016a610390565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101d8600480360360208110156101c257600080fd5b81019080803590602001909291905050506103b5565b6040518085815260200184815260200183815260200182815260200194505050505060405180910390f35b6102456004803603602081101561021957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610426565b005b60006001600083815260200190815260200160002060050160009054906101000a900460ff169050919050565b60016020528060005260406000206000915090508060000154908060010154908060020154908060030154908060040154908060050160009054906101000a900460ff16905086565b60008414156102cb57600080fd5b600060016000868152602001908152602001600020905084816000018190555083816001018190555082816002018190555081816003018190555042816004018190555060018160050160006101000a81548160ff021916908315150217905550847fc481bb149c66d56208c028a621fc4acbda596275d25ca429dc73edf59bb1ae6b85858542600160405180868152602001858152602001848152602001838152602001821515151581526020019550505050505060405180910390a25050505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080600080600160008681526020019081526020016000206001015460016000878152602001908152602001600020600201546001600088815260200190815260200160002060030154600160008981526020019081526020016000206004015493509350935093509193509193565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156104f157600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16146104f057806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b5b5056fea265627a7a72315820bb6c38cdde8681131794f2d85c378149a4c2f1f040d4fbfe8e10427fa00f616464736f6c63430005100032",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b50600436106100625760003560e01c806338a699a4146100675780636408609f146100ad578063843e8d8a146101165780638da5cb5b14610162578063a5fb921f146101ac578063f2fde38b14610203575b600080fd5b6100936004803603602081101561007d57600080fd5b8101908080359060200190929190505050610247565b604051808215151515815260200191505060405180910390f35b6100d9600480360360208110156100c357600080fd5b8101908080359060200190929190505050610274565b6040518087815260200186815260200185815260200184815260200183815260200182151515158152602001965050505050505060405180910390f35b6101606004803603608081101561012c57600080fd5b81019080803590602001909291908035906020019092919080359060200190929190803590602001909291905050506102bd565b005b61016a610390565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b6101d8600480360360208110156101c257600080fd5b81019080803590602001909291905050506103b5565b6040518085815260200184815260200183815260200182815260200194505050505060405180910390f35b6102456004803603602081101561021957600080fd5b81019080803573ffffffffffffffffffffffffffffffffffffffff169060200190929190505050610426565b005b60006001600083815260200190815260200160002060050160009054906101000a900460ff169050919050565b60016020528060005260406000206000915090508060000154908060010154908060020154908060030154908060040154908060050160009054906101000a900460ff16905086565b60008414156102cb57600080fd5b600060016000868152602001908152602001600020905084816000018190555083816001018190555082816002018190555081816003018190555042816004018190555060018160050160006101000a81548160ff021916908315150217905550847fc481bb149c66d56208c028a621fc4acbda596275d25ca429dc73edf59bb1ae6b85858542600160405180868152602001858152602001848152602001838152602001821515151581526020019550505050505060405180910390a25050505050565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b600080600080600160008681526020019081526020016000206001015460016000878152602001908152602001600020600201546001600088815260200190815260200160002060030154600160008981526020019081526020016000206004015493509350935093509193509193565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff1614156104f157600073ffffffffffffffffffffffffffffffffffffffff168173ffffffffffffffffffffffffffffffffffffffff16146104f057806000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b5b5056fea265627a7a72315820bb6c38cdde8681131794f2d85c378149a4c2f1f040d4fbfe8e10427fa00f616464736f6c63430005100032",
+  "sourceMap": "59:1223:0:-;;;326:10:1;318:5;;:18;;;;;;;;;;;;;;;;;;59:1223:0;;;;;;",
+  "deployedSourceMap": "59:1223:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;59:1223:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;922:108;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;922:108:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;243:44;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;243:44:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;430:487;;;;;;13:3:-1;8;5:12;2:2;;;30:1;27;20:12;2:2;430:487:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;260:20:1;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;1034:245:0;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1034:245:0;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;456:123:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;456:123:1;;;;;;;;;;;;;;;;;;;:::i;:::-;;922:108:0;974:4;993:12;:20;1006:6;993:20;;;;;;;;;;;:32;;;;;;;;;;;;986:39;;922:108;;;:::o;243:44::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;430:487::-;545:16;:10;:16;;537:25;;;;;;569:30;602:12;:24;615:10;602:24;;;;;;;;;;;569:57;;653:10;632:7;:18;;:31;;;;690:10;669:7;:18;;:31;;;;722:5;706:7;:13;;:21;;;;749:5;733:7;:13;;:21;;;;780:15;760:7;:17;;:35;;;;823:4;801:7;:19;;;:26;;;;;;;;;;;;;;;;;;852:10;839:73;864:10;876:5;883;890:15;907:4;839:73;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;430:487;;;;;:::o;260:20:1:-;;;;;;;;;;;;;:::o;1034:245:0:-;1103:7;1111;1119;1127;1152:12;:20;1165:6;1152:20;;;;;;;;;;;:31;;;1186:12;:20;1199:6;1186:20;;;;;;;;;;;:26;;;1214:12;:20;1227:6;1214:20;;;;;;;;;;;:26;;;1242:12;:20;1255:6;1242:20;;;;;;;;;;;:30;;;1142:132;;;;;;;;1034:245;;;;;:::o;456:123:1:-;399:5;;;;;;;;;;;385:19;;:10;:19;;;381:38;;;552:1;532:22;;:8;:22;;;528:44;;564:8;556:5;;:16;;;;;;;;;;;;;;;;;;528:44;381:38;456:123;:::o",
+  "source": "pragma solidity >=0.4.21 <0.7.0;\n\nimport './Ownable.sol';\n\ncontract Bookchain is Ownable {\n\n  struct Book {\n    bytes32 recordHash;\n    bytes32 authorName;\n    bytes32 title;\n    bytes32 email;\n    uint timestamp;\n    bool isDocExists;\n  }\n\n  mapping(bytes32 => Book) public documentdata;\n\n  event _NewBookAuth(bytes32 indexed recordHash, bytes32 authorName, bytes32 title, bytes32 email, uint256 timestamp, bool isDocExists);\n\n  function authNewBook(bytes32 recordHash, bytes32 authorName, bytes32 title, bytes32 email) external {\n\n    require(recordHash != \"\");\n\n    Bookchain.Book storage docdata = documentdata[recordHash];\n    docdata.recordHash = recordHash;\n    docdata.authorName = authorName;\n    docdata.title = title;\n    docdata.email = email;\n    docdata.timestamp = block.timestamp;\n    docdata.isDocExists = true;\n\n    emit _NewBookAuth(recordHash, authorName, title, email, block.timestamp, true);\n  }\n\n\n  function exists(bytes32 record) view public returns(bool) {\n    return documentdata[record].isDocExists;\n  }\n\n  function getBookDetailFromHash(bytes32 record) view public returns ( bytes32,bytes32,bytes32,uint256) {\n    return  ( documentdata[record].authorName , documentdata[record].title, documentdata[record].email, documentdata[record].timestamp );\n  }\n\n}",
+  "sourcePath": "/home/ansnoussi/Desktop/BookChain/contracts/Bookchain.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/Bookchain.sol",
+    "exportedSymbols": {
+      "Bookchain": [
+        154
+      ]
+    },
+    "id": 155,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.4",
+          ".21",
+          "<",
+          "0.7",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "absolutePath": "project:/contracts/Ownable.sol",
+        "file": "./Ownable.sol",
+        "id": 2,
+        "nodeType": "ImportDirective",
+        "scope": 155,
+        "sourceUnit": 196,
+        "src": "34:23:0",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": null,
+            "baseName": {
+              "contractScope": null,
+              "id": 3,
+              "name": "Ownable",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 195,
+              "src": "81:7:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Ownable_$195",
+                "typeString": "contract Ownable"
+              }
+            },
+            "id": 4,
+            "nodeType": "InheritanceSpecifier",
+            "src": "81:7:0"
+          }
+        ],
+        "contractDependencies": [
+          195
+        ],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 154,
+        "linearizedBaseContracts": [
+          154,
+          195
+        ],
+        "name": "Bookchain",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Bookchain.Book",
+            "id": 17,
+            "members": [
+              {
+                "constant": false,
+                "id": 6,
+                "name": "recordHash",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "112:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 5,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "112:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 8,
+                "name": "authorName",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "136:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 7,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "136:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 10,
+                "name": "title",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "160:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 9,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "160:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 12,
+                "name": "email",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "179:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 11,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "179:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 14,
+                "name": "timestamp",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "198:14:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "198:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 16,
+                "name": "isDocExists",
+                "nodeType": "VariableDeclaration",
+                "scope": 17,
+                "src": "218:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bool",
+                  "typeString": "bool"
+                },
+                "typeName": {
+                  "id": 15,
+                  "name": "bool",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "218:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Book",
+            "nodeType": "StructDefinition",
+            "scope": 154,
+            "src": "94:145:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 21,
+            "name": "documentdata",
+            "nodeType": "VariableDeclaration",
+            "scope": 154,
+            "src": "243:44:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
+              "typeString": "mapping(bytes32 => struct Bookchain.Book)"
+            },
+            "typeName": {
+              "id": 20,
+              "keyType": {
+                "id": 18,
+                "name": "bytes32",
+                "nodeType": "ElementaryTypeName",
+                "src": "251:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "243:24:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
+                "typeString": "mapping(bytes32 => struct Bookchain.Book)"
+              },
+              "valueType": {
+                "contractScope": null,
+                "id": 19,
+                "name": "Book",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 17,
+                "src": "262:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
+                  "typeString": "struct Bookchain.Book"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "anonymous": false,
+            "documentation": null,
+            "id": 35,
+            "name": "_NewBookAuth",
+            "nodeType": "EventDefinition",
+            "parameters": {
+              "id": 34,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 23,
+                  "indexed": true,
+                  "name": "recordHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "311:26:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 22,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "311:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 25,
+                  "indexed": false,
+                  "name": "authorName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "339:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 24,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "339:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 27,
+                  "indexed": false,
+                  "name": "title",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "359:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 26,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "359:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 29,
+                  "indexed": false,
+                  "name": "email",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "374:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 28,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "374:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 31,
+                  "indexed": false,
+                  "name": "timestamp",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "389:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 30,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "389:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 33,
+                  "indexed": false,
+                  "name": "isDocExists",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 35,
+                  "src": "408:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 32,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "408:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "310:115:0"
+            },
+            "src": "292:134:0"
+          },
+          {
+            "body": {
+              "id": 107,
+              "nodeType": "Block",
+              "src": "530:387:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        "id": 49,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
+                          "argumentTypes": null,
+                          "id": 47,
+                          "name": "recordHash",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 37,
+                          "src": "545:10:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes32",
+                            "typeString": "bytes32"
+                          }
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": "!=",
+                        "rightExpression": {
+                          "argumentTypes": null,
+                          "hexValue": "",
+                          "id": 48,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "string",
+                          "lValueRequested": false,
+                          "nodeType": "Literal",
+                          "src": "559:2:0",
+                          "subdenomination": null,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_stringliteral_c5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470",
+                            "typeString": "literal_string \"\""
+                          },
+                          "value": ""
+                        },
+                        "src": "545:16:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 46,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [
+                        213,
+                        214
+                      ],
+                      "referencedDeclaration": 213,
+                      "src": "537:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 50,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "537:25:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 51,
+                  "nodeType": "ExpressionStatement",
+                  "src": "537:25:0"
+                },
+                {
+                  "assignments": [
+                    55
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 55,
+                      "name": "docdata",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 107,
+                      "src": "569:30:0",
+                      "stateVariable": false,
+                      "storageLocation": "storage",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
+                        "typeString": "struct Bookchain.Book"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 54,
+                        "name": "Bookchain.Book",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 17,
+                        "src": "569:14:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
+                          "typeString": "struct Bookchain.Book"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 59,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "baseExpression": {
+                      "argumentTypes": null,
+                      "id": 56,
+                      "name": "documentdata",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21,
+                      "src": "602:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
+                        "typeString": "mapping(bytes32 => struct Bookchain.Book storage ref)"
+                      }
+                    },
+                    "id": 58,
+                    "indexExpression": {
+                      "argumentTypes": null,
+                      "id": 57,
+                      "name": "recordHash",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 37,
+                      "src": "615:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "IndexAccess",
+                    "src": "602:24:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Book_$17_storage",
+                      "typeString": "struct Bookchain.Book storage ref"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "569:57:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 64,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 60,
+                        "name": "docdata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55,
+                        "src": "632:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
+                          "typeString": "struct Bookchain.Book storage pointer"
+                        }
+                      },
+                      "id": 62,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "recordHash",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 6,
+                      "src": "632:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 63,
+                      "name": "recordHash",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 37,
+                      "src": "653:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "632:31:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 65,
+                  "nodeType": "ExpressionStatement",
+                  "src": "632:31:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 70,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 66,
+                        "name": "docdata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55,
+                        "src": "669:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
+                          "typeString": "struct Bookchain.Book storage pointer"
+                        }
+                      },
+                      "id": 68,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "authorName",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 8,
+                      "src": "669:18:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 69,
+                      "name": "authorName",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 39,
+                      "src": "690:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "669:31:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 71,
+                  "nodeType": "ExpressionStatement",
+                  "src": "669:31:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 76,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 72,
+                        "name": "docdata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55,
+                        "src": "706:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
+                          "typeString": "struct Bookchain.Book storage pointer"
+                        }
+                      },
+                      "id": 74,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "title",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 10,
+                      "src": "706:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 75,
+                      "name": "title",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 41,
+                      "src": "722:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "706:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 77,
+                  "nodeType": "ExpressionStatement",
+                  "src": "706:21:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 82,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 78,
+                        "name": "docdata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55,
+                        "src": "733:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
+                          "typeString": "struct Bookchain.Book storage pointer"
+                        }
+                      },
+                      "id": 80,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "email",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 12,
+                      "src": "733:13:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 81,
+                      "name": "email",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 43,
+                      "src": "749:5:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bytes32",
+                        "typeString": "bytes32"
+                      }
+                    },
+                    "src": "733:21:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "id": 83,
+                  "nodeType": "ExpressionStatement",
+                  "src": "733:21:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 89,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 84,
+                        "name": "docdata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55,
+                        "src": "760:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
+                          "typeString": "struct Bookchain.Book storage pointer"
+                        }
+                      },
+                      "id": 86,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "timestamp",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 14,
+                      "src": "760:17:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 87,
+                        "name": "block",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 200,
+                        "src": "780:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_block",
+                          "typeString": "block"
+                        }
+                      },
+                      "id": 88,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "timestamp",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "780:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "760:35:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 90,
+                  "nodeType": "ExpressionStatement",
+                  "src": "760:35:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 95,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 91,
+                        "name": "docdata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 55,
+                        "src": "801:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Book_$17_storage_ptr",
+                          "typeString": "struct Bookchain.Book storage pointer"
+                        }
+                      },
+                      "id": 93,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "isDocExists",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 16,
+                      "src": "801:19:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "hexValue": "74727565",
+                      "id": 94,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": true,
+                      "kind": "bool",
+                      "lValueRequested": false,
+                      "nodeType": "Literal",
+                      "src": "823:4:0",
+                      "subdenomination": null,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      },
+                      "value": "true"
+                    },
+                    "src": "801:26:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "id": 96,
+                  "nodeType": "ExpressionStatement",
+                  "src": "801:26:0"
+                },
+                {
+                  "eventCall": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 98,
+                        "name": "recordHash",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 37,
+                        "src": "852:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 99,
+                        "name": "authorName",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 39,
+                        "src": "864:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 100,
+                        "name": "title",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 41,
+                        "src": "876:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 101,
+                        "name": "email",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 43,
+                        "src": "883:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 102,
+                          "name": "block",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 200,
+                          "src": "890:5:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_block",
+                            "typeString": "block"
+                          }
+                        },
+                        "id": 103,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "890:15:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "hexValue": "74727565",
+                        "id": 104,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "kind": "bool",
+                        "lValueRequested": false,
+                        "nodeType": "Literal",
+                        "src": "907:4:0",
+                        "subdenomination": null,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        },
+                        "value": "true"
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 97,
+                      "name": "_NewBookAuth",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 35,
+                      "src": "839:12:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_event_nonpayable$_t_bytes32_$_t_bytes32_$_t_bytes32_$_t_bytes32_$_t_uint256_$_t_bool_$returns$__$",
+                        "typeString": "function (bytes32,bytes32,bytes32,bytes32,uint256,bool)"
+                      }
+                    },
+                    "id": 105,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "839:73:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 106,
+                  "nodeType": "EmitStatement",
+                  "src": "834:78:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 108,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "authNewBook",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 44,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37,
+                  "name": "recordHash",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 108,
+                  "src": "451:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 36,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "451:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 39,
+                  "name": "authorName",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 108,
+                  "src": "471:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 38,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "471:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 41,
+                  "name": "title",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 108,
+                  "src": "491:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 40,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "491:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 43,
+                  "name": "email",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 108,
+                  "src": "506:13:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 42,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "506:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "450:70:0"
+            },
+            "returnParameters": {
+              "id": 45,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "530:0:0"
+            },
+            "scope": 154,
+            "src": "430:487:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 120,
+              "nodeType": "Block",
+              "src": "980:50:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 115,
+                        "name": "documentdata",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 21,
+                        "src": "993:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
+                          "typeString": "mapping(bytes32 => struct Bookchain.Book storage ref)"
+                        }
+                      },
+                      "id": 117,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 116,
+                        "name": "record",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 110,
+                        "src": "1006:6:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "993:20:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Book_$17_storage",
+                        "typeString": "struct Bookchain.Book storage ref"
+                      }
+                    },
+                    "id": 118,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "isDocExists",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 16,
+                    "src": "993:32:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 114,
+                  "id": 119,
+                  "nodeType": "Return",
+                  "src": "986:39:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 121,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "exists",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 111,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 110,
+                  "name": "record",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 121,
+                  "src": "938:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 109,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "938:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "937:16:0"
+            },
+            "returnParameters": {
+              "id": 114,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 113,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 121,
+                  "src": "974:4:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 112,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "974:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "973:6:0"
+            },
+            "scope": 154,
+            "src": "922:108:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 152,
+              "nodeType": "Block",
+              "src": "1136:143:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "components": [
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 134,
+                            "name": "documentdata",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 21,
+                            "src": "1152:12:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
+                              "typeString": "mapping(bytes32 => struct Bookchain.Book storage ref)"
+                            }
+                          },
+                          "id": 136,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 135,
+                            "name": "record",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 123,
+                            "src": "1165:6:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1152:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Book_$17_storage",
+                            "typeString": "struct Bookchain.Book storage ref"
+                          }
+                        },
+                        "id": 137,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "authorName",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 8,
+                        "src": "1152:31:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 138,
+                            "name": "documentdata",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 21,
+                            "src": "1186:12:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
+                              "typeString": "mapping(bytes32 => struct Bookchain.Book storage ref)"
+                            }
+                          },
+                          "id": 140,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 139,
+                            "name": "record",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 123,
+                            "src": "1199:6:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1186:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Book_$17_storage",
+                            "typeString": "struct Bookchain.Book storage ref"
+                          }
+                        },
+                        "id": 141,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "title",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 10,
+                        "src": "1186:26:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 142,
+                            "name": "documentdata",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 21,
+                            "src": "1214:12:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
+                              "typeString": "mapping(bytes32 => struct Bookchain.Book storage ref)"
+                            }
+                          },
+                          "id": 144,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 143,
+                            "name": "record",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 123,
+                            "src": "1227:6:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1214:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Book_$17_storage",
+                            "typeString": "struct Bookchain.Book storage ref"
+                          }
+                        },
+                        "id": 145,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "email",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 12,
+                        "src": "1214:26:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "baseExpression": {
+                            "argumentTypes": null,
+                            "id": 146,
+                            "name": "documentdata",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 21,
+                            "src": "1242:12:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_mapping$_t_bytes32_$_t_struct$_Book_$17_storage_$",
+                              "typeString": "mapping(bytes32 => struct Bookchain.Book storage ref)"
+                            }
+                          },
+                          "id": 148,
+                          "indexExpression": {
+                            "argumentTypes": null,
+                            "id": 147,
+                            "name": "record",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": 123,
+                            "src": "1255:6:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_bytes32",
+                              "typeString": "bytes32"
+                            }
+                          },
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "nodeType": "IndexAccess",
+                          "src": "1242:20:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_struct$_Book_$17_storage",
+                            "typeString": "struct Bookchain.Book storage ref"
+                          }
+                        },
+                        "id": 149,
+                        "isConstant": false,
+                        "isLValue": true,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "timestamp",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 14,
+                        "src": "1242:30:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      }
+                    ],
+                    "id": 150,
+                    "isConstant": false,
+                    "isInlineArray": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "TupleExpression",
+                    "src": "1150:124:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$_t_bytes32_$_t_bytes32_$_t_bytes32_$_t_uint256_$",
+                      "typeString": "tuple(bytes32,bytes32,bytes32,uint256)"
+                    }
+                  },
+                  "functionReturnParameters": 133,
+                  "id": 151,
+                  "nodeType": "Return",
+                  "src": "1142:132:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 153,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "getBookDetailFromHash",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 124,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 123,
+                  "name": "record",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 153,
+                  "src": "1065:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 122,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1065:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1064:16:0"
+            },
+            "returnParameters": {
+              "id": 133,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 126,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 153,
+                  "src": "1103:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 125,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1103:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 128,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 153,
+                  "src": "1111:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 127,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1111:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 130,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 153,
+                  "src": "1119:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 129,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1119:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 132,
+                  "name": "",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 153,
+                  "src": "1127:7:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 131,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1127:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1101:34:0"
+            },
+            "scope": 154,
+            "src": "1034:245:0",
+            "stateMutability": "view",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 155,
+        "src": "59:1223:0"
+      }
+    ],
+    "src": "0:1282:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/Bookchain.sol",
+      "exportedSymbols": {
+        "Bookchain": [
+          154
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.4",
+            ".21",
+            "<",
+            "0.7",
+            ".0"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:32:0"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 196,
+          "absolutePath": "project:/contracts/Ownable.sol",
+          "file": "./Ownable.sol",
+          "scope": 155,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 2,
+        "name": "ImportDirective",
+        "src": "34:23:0"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            195
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            154,
+            195
+          ],
+          "name": "Bookchain",
+          "scope": 155
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": null
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Ownable",
+                  "referencedDeclaration": 195,
+                  "type": "contract Ownable"
+                },
+                "id": 3,
+                "name": "UserDefinedTypeName",
+                "src": "81:7:0"
+              }
+            ],
+            "id": 4,
+            "name": "InheritanceSpecifier",
+            "src": "81:7:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "Bookchain.Book",
+              "name": "Book",
+              "scope": 154,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "recordHash",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 5,
+                    "name": "ElementaryTypeName",
+                    "src": "112:7:0"
+                  }
+                ],
+                "id": 6,
+                "name": "VariableDeclaration",
+                "src": "112:18:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "authorName",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 7,
+                    "name": "ElementaryTypeName",
+                    "src": "136:7:0"
+                  }
+                ],
+                "id": 8,
+                "name": "VariableDeclaration",
+                "src": "136:18:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "title",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 9,
+                    "name": "ElementaryTypeName",
+                    "src": "160:7:0"
+                  }
+                ],
+                "id": 10,
+                "name": "VariableDeclaration",
+                "src": "160:13:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "email",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bytes32",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 11,
+                    "name": "ElementaryTypeName",
+                    "src": "179:7:0"
+                  }
+                ],
+                "id": 12,
+                "name": "VariableDeclaration",
+                "src": "179:13:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "timestamp",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 13,
+                    "name": "ElementaryTypeName",
+                    "src": "198:4:0"
+                  }
+                ],
+                "id": 14,
+                "name": "VariableDeclaration",
+                "src": "198:14:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "isDocExists",
+                  "scope": 17,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "bool",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bool",
+                      "type": "bool"
+                    },
+                    "id": 15,
+                    "name": "ElementaryTypeName",
+                    "src": "218:4:0"
+                  }
+                ],
+                "id": 16,
+                "name": "VariableDeclaration",
+                "src": "218:16:0"
+              }
+            ],
+            "id": 17,
+            "name": "StructDefinition",
+            "src": "94:145:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "documentdata",
+              "scope": 154,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(bytes32 => struct Bookchain.Book)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(bytes32 => struct Bookchain.Book)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "bytes32",
+                      "type": "bytes32"
+                    },
+                    "id": 18,
+                    "name": "ElementaryTypeName",
+                    "src": "251:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Book",
+                      "referencedDeclaration": 17,
+                      "type": "struct Bookchain.Book"
+                    },
+                    "id": 19,
+                    "name": "UserDefinedTypeName",
+                    "src": "262:4:0"
+                  }
+                ],
+                "id": 20,
+                "name": "Mapping",
+                "src": "243:24:0"
+              }
+            ],
+            "id": 21,
+            "name": "VariableDeclaration",
+            "src": "243:44:0"
+          },
+          {
+            "attributes": {
+              "anonymous": false,
+              "documentation": null,
+              "name": "_NewBookAuth"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": true,
+                      "name": "recordHash",
+                      "scope": 35,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 22,
+                        "name": "ElementaryTypeName",
+                        "src": "311:7:0"
+                      }
+                    ],
+                    "id": 23,
+                    "name": "VariableDeclaration",
+                    "src": "311:26:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "authorName",
+                      "scope": 35,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 24,
+                        "name": "ElementaryTypeName",
+                        "src": "339:7:0"
+                      }
+                    ],
+                    "id": 25,
+                    "name": "VariableDeclaration",
+                    "src": "339:18:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "title",
+                      "scope": 35,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 26,
+                        "name": "ElementaryTypeName",
+                        "src": "359:7:0"
+                      }
+                    ],
+                    "id": 27,
+                    "name": "VariableDeclaration",
+                    "src": "359:13:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "email",
+                      "scope": 35,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 28,
+                        "name": "ElementaryTypeName",
+                        "src": "374:7:0"
+                      }
+                    ],
+                    "id": 29,
+                    "name": "VariableDeclaration",
+                    "src": "374:13:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "timestamp",
+                      "scope": 35,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 30,
+                        "name": "ElementaryTypeName",
+                        "src": "389:7:0"
+                      }
+                    ],
+                    "id": 31,
+                    "name": "VariableDeclaration",
+                    "src": "389:17:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "indexed": false,
+                      "name": "isDocExists",
+                      "scope": 35,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 32,
+                        "name": "ElementaryTypeName",
+                        "src": "408:4:0"
+                      }
+                    ],
+                    "id": 33,
+                    "name": "VariableDeclaration",
+                    "src": "408:16:0"
+                  }
+                ],
+                "id": 34,
+                "name": "ParameterList",
+                "src": "310:115:0"
+              }
+            ],
+            "id": 35,
+            "name": "EventDefinition",
+            "src": "292:134:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "authNewBook",
+              "scope": 154,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "recordHash",
+                      "scope": 108,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 36,
+                        "name": "ElementaryTypeName",
+                        "src": "451:7:0"
+                      }
+                    ],
+                    "id": 37,
+                    "name": "VariableDeclaration",
+                    "src": "451:18:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "authorName",
+                      "scope": 108,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 38,
+                        "name": "ElementaryTypeName",
+                        "src": "471:7:0"
+                      }
+                    ],
+                    "id": 39,
+                    "name": "VariableDeclaration",
+                    "src": "471:18:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "title",
+                      "scope": 108,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 40,
+                        "name": "ElementaryTypeName",
+                        "src": "491:7:0"
+                      }
+                    ],
+                    "id": 41,
+                    "name": "VariableDeclaration",
+                    "src": "491:13:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "email",
+                      "scope": 108,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 42,
+                        "name": "ElementaryTypeName",
+                        "src": "506:7:0"
+                      }
+                    ],
+                    "id": 43,
+                    "name": "VariableDeclaration",
+                    "src": "506:13:0"
+                  }
+                ],
+                "id": 44,
+                "name": "ParameterList",
+                "src": "450:70:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 45,
+                "name": "ParameterList",
+                "src": "530:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                213,
+                                214
+                              ],
+                              "referencedDeclaration": 213,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 46,
+                            "name": "Identifier",
+                            "src": "537:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_bytes32",
+                                "typeString": "bytes32"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": "!=",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 37,
+                                  "type": "bytes32",
+                                  "value": "recordHash"
+                                },
+                                "id": 47,
+                                "name": "Identifier",
+                                "src": "545:10:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "hexvalue": "",
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "subdenomination": null,
+                                  "token": "string",
+                                  "type": "literal_string \"\"",
+                                  "value": ""
+                                },
+                                "id": 48,
+                                "name": "Literal",
+                                "src": "559:2:0"
+                              }
+                            ],
+                            "id": 49,
+                            "name": "BinaryOperation",
+                            "src": "545:16:0"
+                          }
+                        ],
+                        "id": 50,
+                        "name": "FunctionCall",
+                        "src": "537:25:0"
+                      }
+                    ],
+                    "id": 51,
+                    "name": "ExpressionStatement",
+                    "src": "537:25:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        55
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "docdata",
+                          "scope": 107,
+                          "stateVariable": false,
+                          "storageLocation": "storage",
+                          "type": "struct Bookchain.Book",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Bookchain.Book",
+                              "referencedDeclaration": 17,
+                              "type": "struct Bookchain.Book"
+                            },
+                            "id": 54,
+                            "name": "UserDefinedTypeName",
+                            "src": "569:14:0"
+                          }
+                        ],
+                        "id": 55,
+                        "name": "VariableDeclaration",
+                        "src": "569:30:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "struct Bookchain.Book storage ref"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 21,
+                              "type": "mapping(bytes32 => struct Bookchain.Book storage ref)",
+                              "value": "documentdata"
+                            },
+                            "id": 56,
+                            "name": "Identifier",
+                            "src": "602:12:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 37,
+                              "type": "bytes32",
+                              "value": "recordHash"
+                            },
+                            "id": 57,
+                            "name": "Identifier",
+                            "src": "615:10:0"
+                          }
+                        ],
+                        "id": 58,
+                        "name": "IndexAccess",
+                        "src": "602:24:0"
+                      }
+                    ],
+                    "id": 59,
+                    "name": "VariableDeclarationStatement",
+                    "src": "569:57:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bytes32"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "recordHash",
+                              "referencedDeclaration": 6,
+                              "type": "bytes32"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 55,
+                                  "type": "struct Bookchain.Book storage pointer",
+                                  "value": "docdata"
+                                },
+                                "id": 60,
+                                "name": "Identifier",
+                                "src": "632:7:0"
+                              }
+                            ],
+                            "id": 62,
+                            "name": "MemberAccess",
+                            "src": "632:18:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 37,
+                              "type": "bytes32",
+                              "value": "recordHash"
+                            },
+                            "id": 63,
+                            "name": "Identifier",
+                            "src": "653:10:0"
+                          }
+                        ],
+                        "id": 64,
+                        "name": "Assignment",
+                        "src": "632:31:0"
+                      }
+                    ],
+                    "id": 65,
+                    "name": "ExpressionStatement",
+                    "src": "632:31:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bytes32"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "authorName",
+                              "referencedDeclaration": 8,
+                              "type": "bytes32"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 55,
+                                  "type": "struct Bookchain.Book storage pointer",
+                                  "value": "docdata"
+                                },
+                                "id": 66,
+                                "name": "Identifier",
+                                "src": "669:7:0"
+                              }
+                            ],
+                            "id": 68,
+                            "name": "MemberAccess",
+                            "src": "669:18:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 39,
+                              "type": "bytes32",
+                              "value": "authorName"
+                            },
+                            "id": 69,
+                            "name": "Identifier",
+                            "src": "690:10:0"
+                          }
+                        ],
+                        "id": 70,
+                        "name": "Assignment",
+                        "src": "669:31:0"
+                      }
+                    ],
+                    "id": 71,
+                    "name": "ExpressionStatement",
+                    "src": "669:31:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bytes32"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "title",
+                              "referencedDeclaration": 10,
+                              "type": "bytes32"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 55,
+                                  "type": "struct Bookchain.Book storage pointer",
+                                  "value": "docdata"
+                                },
+                                "id": 72,
+                                "name": "Identifier",
+                                "src": "706:7:0"
+                              }
+                            ],
+                            "id": 74,
+                            "name": "MemberAccess",
+                            "src": "706:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 41,
+                              "type": "bytes32",
+                              "value": "title"
+                            },
+                            "id": 75,
+                            "name": "Identifier",
+                            "src": "722:5:0"
+                          }
+                        ],
+                        "id": 76,
+                        "name": "Assignment",
+                        "src": "706:21:0"
+                      }
+                    ],
+                    "id": 77,
+                    "name": "ExpressionStatement",
+                    "src": "706:21:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bytes32"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "email",
+                              "referencedDeclaration": 12,
+                              "type": "bytes32"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 55,
+                                  "type": "struct Bookchain.Book storage pointer",
+                                  "value": "docdata"
+                                },
+                                "id": 78,
+                                "name": "Identifier",
+                                "src": "733:7:0"
+                              }
+                            ],
+                            "id": 80,
+                            "name": "MemberAccess",
+                            "src": "733:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 43,
+                              "type": "bytes32",
+                              "value": "email"
+                            },
+                            "id": 81,
+                            "name": "Identifier",
+                            "src": "749:5:0"
+                          }
+                        ],
+                        "id": 82,
+                        "name": "Assignment",
+                        "src": "733:21:0"
+                      }
+                    ],
+                    "id": 83,
+                    "name": "ExpressionStatement",
+                    "src": "733:21:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "timestamp",
+                              "referencedDeclaration": 14,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 55,
+                                  "type": "struct Bookchain.Book storage pointer",
+                                  "value": "docdata"
+                                },
+                                "id": 84,
+                                "name": "Identifier",
+                                "src": "760:7:0"
+                              }
+                            ],
+                            "id": 86,
+                            "name": "MemberAccess",
+                            "src": "760:17:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "timestamp",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 200,
+                                  "type": "block",
+                                  "value": "block"
+                                },
+                                "id": 87,
+                                "name": "Identifier",
+                                "src": "780:5:0"
+                              }
+                            ],
+                            "id": 88,
+                            "name": "MemberAccess",
+                            "src": "780:15:0"
+                          }
+                        ],
+                        "id": 89,
+                        "name": "Assignment",
+                        "src": "760:35:0"
+                      }
+                    ],
+                    "id": 90,
+                    "name": "ExpressionStatement",
+                    "src": "760:35:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "isDocExists",
+                              "referencedDeclaration": 16,
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 55,
+                                  "type": "struct Bookchain.Book storage pointer",
+                                  "value": "docdata"
+                                },
+                                "id": 91,
+                                "name": "Identifier",
+                                "src": "801:7:0"
+                              }
+                            ],
+                            "id": 93,
+                            "name": "MemberAccess",
+                            "src": "801:19:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 94,
+                            "name": "Literal",
+                            "src": "823:4:0"
+                          }
+                        ],
+                        "id": 95,
+                        "name": "Assignment",
+                        "src": "801:26:0"
+                      }
+                    ],
+                    "id": 96,
+                    "name": "ExpressionStatement",
+                    "src": "801:26:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                },
+                                {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                },
+                                {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                },
+                                {
+                                  "typeIdentifier": "t_bytes32",
+                                  "typeString": "bytes32"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 35,
+                              "type": "function (bytes32,bytes32,bytes32,bytes32,uint256,bool)",
+                              "value": "_NewBookAuth"
+                            },
+                            "id": 97,
+                            "name": "Identifier",
+                            "src": "839:12:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 37,
+                              "type": "bytes32",
+                              "value": "recordHash"
+                            },
+                            "id": 98,
+                            "name": "Identifier",
+                            "src": "852:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 39,
+                              "type": "bytes32",
+                              "value": "authorName"
+                            },
+                            "id": 99,
+                            "name": "Identifier",
+                            "src": "864:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 41,
+                              "type": "bytes32",
+                              "value": "title"
+                            },
+                            "id": 100,
+                            "name": "Identifier",
+                            "src": "876:5:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 43,
+                              "type": "bytes32",
+                              "value": "email"
+                            },
+                            "id": 101,
+                            "name": "Identifier",
+                            "src": "883:5:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "timestamp",
+                              "referencedDeclaration": null,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 200,
+                                  "type": "block",
+                                  "value": "block"
+                                },
+                                "id": 102,
+                                "name": "Identifier",
+                                "src": "890:5:0"
+                              }
+                            ],
+                            "id": 103,
+                            "name": "MemberAccess",
+                            "src": "890:15:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "hexvalue": "74727565",
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": true,
+                              "lValueRequested": false,
+                              "subdenomination": null,
+                              "token": "bool",
+                              "type": "bool",
+                              "value": "true"
+                            },
+                            "id": 104,
+                            "name": "Literal",
+                            "src": "907:4:0"
+                          }
+                        ],
+                        "id": 105,
+                        "name": "FunctionCall",
+                        "src": "839:73:0"
+                      }
+                    ],
+                    "id": 106,
+                    "name": "EmitStatement",
+                    "src": "834:78:0"
+                  }
+                ],
+                "id": 107,
+                "name": "Block",
+                "src": "530:387:0"
+              }
+            ],
+            "id": 108,
+            "name": "FunctionDefinition",
+            "src": "430:487:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "exists",
+              "scope": 154,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "record",
+                      "scope": 121,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 109,
+                        "name": "ElementaryTypeName",
+                        "src": "938:7:0"
+                      }
+                    ],
+                    "id": 110,
+                    "name": "VariableDeclaration",
+                    "src": "938:14:0"
+                  }
+                ],
+                "id": 111,
+                "name": "ParameterList",
+                "src": "937:16:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 121,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 112,
+                        "name": "ElementaryTypeName",
+                        "src": "974:4:0"
+                      }
+                    ],
+                    "id": 113,
+                    "name": "VariableDeclaration",
+                    "src": "974:4:0"
+                  }
+                ],
+                "id": 114,
+                "name": "ParameterList",
+                "src": "973:6:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 114
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "isDocExists",
+                          "referencedDeclaration": 16,
+                          "type": "bool"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "struct Bookchain.Book storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 21,
+                                  "type": "mapping(bytes32 => struct Bookchain.Book storage ref)",
+                                  "value": "documentdata"
+                                },
+                                "id": 115,
+                                "name": "Identifier",
+                                "src": "993:12:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 110,
+                                  "type": "bytes32",
+                                  "value": "record"
+                                },
+                                "id": 116,
+                                "name": "Identifier",
+                                "src": "1006:6:0"
+                              }
+                            ],
+                            "id": 117,
+                            "name": "IndexAccess",
+                            "src": "993:20:0"
+                          }
+                        ],
+                        "id": 118,
+                        "name": "MemberAccess",
+                        "src": "993:32:0"
+                      }
+                    ],
+                    "id": 119,
+                    "name": "Return",
+                    "src": "986:39:0"
+                  }
+                ],
+                "id": 120,
+                "name": "Block",
+                "src": "980:50:0"
+              }
+            ],
+            "id": 121,
+            "name": "FunctionDefinition",
+            "src": "922:108:0"
+          },
+          {
+            "attributes": {
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "kind": "function",
+              "modifiers": [
+                null
+              ],
+              "name": "getBookDetailFromHash",
+              "scope": 154,
+              "stateMutability": "view",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "record",
+                      "scope": 153,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 122,
+                        "name": "ElementaryTypeName",
+                        "src": "1065:7:0"
+                      }
+                    ],
+                    "id": 123,
+                    "name": "VariableDeclaration",
+                    "src": "1065:14:0"
+                  }
+                ],
+                "id": 124,
+                "name": "ParameterList",
+                "src": "1064:16:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 153,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 125,
+                        "name": "ElementaryTypeName",
+                        "src": "1103:7:0"
+                      }
+                    ],
+                    "id": 126,
+                    "name": "VariableDeclaration",
+                    "src": "1103:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 153,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 127,
+                        "name": "ElementaryTypeName",
+                        "src": "1111:7:0"
+                      }
+                    ],
+                    "id": 128,
+                    "name": "VariableDeclaration",
+                    "src": "1111:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 153,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bytes32",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bytes32",
+                          "type": "bytes32"
+                        },
+                        "id": 129,
+                        "name": "ElementaryTypeName",
+                        "src": "1119:7:0"
+                      }
+                    ],
+                    "id": 130,
+                    "name": "VariableDeclaration",
+                    "src": "1119:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 153,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint256",
+                          "type": "uint256"
+                        },
+                        "id": 131,
+                        "name": "ElementaryTypeName",
+                        "src": "1127:7:0"
+                      }
+                    ],
+                    "id": 132,
+                    "name": "VariableDeclaration",
+                    "src": "1127:7:0"
+                  }
+                ],
+                "id": 133,
+                "name": "ParameterList",
+                "src": "1101:34:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 133
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isInlineArray": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "type": "tuple(bytes32,bytes32,bytes32,uint256)"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "authorName",
+                              "referencedDeclaration": 8,
+                              "type": "bytes32"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct Bookchain.Book storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 21,
+                                      "type": "mapping(bytes32 => struct Bookchain.Book storage ref)",
+                                      "value": "documentdata"
+                                    },
+                                    "id": 134,
+                                    "name": "Identifier",
+                                    "src": "1152:12:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 123,
+                                      "type": "bytes32",
+                                      "value": "record"
+                                    },
+                                    "id": 135,
+                                    "name": "Identifier",
+                                    "src": "1165:6:0"
+                                  }
+                                ],
+                                "id": 136,
+                                "name": "IndexAccess",
+                                "src": "1152:20:0"
+                              }
+                            ],
+                            "id": 137,
+                            "name": "MemberAccess",
+                            "src": "1152:31:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "title",
+                              "referencedDeclaration": 10,
+                              "type": "bytes32"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct Bookchain.Book storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 21,
+                                      "type": "mapping(bytes32 => struct Bookchain.Book storage ref)",
+                                      "value": "documentdata"
+                                    },
+                                    "id": 138,
+                                    "name": "Identifier",
+                                    "src": "1186:12:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 123,
+                                      "type": "bytes32",
+                                      "value": "record"
+                                    },
+                                    "id": 139,
+                                    "name": "Identifier",
+                                    "src": "1199:6:0"
+                                  }
+                                ],
+                                "id": 140,
+                                "name": "IndexAccess",
+                                "src": "1186:20:0"
+                              }
+                            ],
+                            "id": 141,
+                            "name": "MemberAccess",
+                            "src": "1186:26:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "email",
+                              "referencedDeclaration": 12,
+                              "type": "bytes32"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct Bookchain.Book storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 21,
+                                      "type": "mapping(bytes32 => struct Bookchain.Book storage ref)",
+                                      "value": "documentdata"
+                                    },
+                                    "id": 142,
+                                    "name": "Identifier",
+                                    "src": "1214:12:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 123,
+                                      "type": "bytes32",
+                                      "value": "record"
+                                    },
+                                    "id": 143,
+                                    "name": "Identifier",
+                                    "src": "1227:6:0"
+                                  }
+                                ],
+                                "id": 144,
+                                "name": "IndexAccess",
+                                "src": "1214:20:0"
+                              }
+                            ],
+                            "id": 145,
+                            "name": "MemberAccess",
+                            "src": "1214:26:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "timestamp",
+                              "referencedDeclaration": 14,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct Bookchain.Book storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 21,
+                                      "type": "mapping(bytes32 => struct Bookchain.Book storage ref)",
+                                      "value": "documentdata"
+                                    },
+                                    "id": 146,
+                                    "name": "Identifier",
+                                    "src": "1242:12:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 123,
+                                      "type": "bytes32",
+                                      "value": "record"
+                                    },
+                                    "id": 147,
+                                    "name": "Identifier",
+                                    "src": "1255:6:0"
+                                  }
+                                ],
+                                "id": 148,
+                                "name": "IndexAccess",
+                                "src": "1242:20:0"
+                              }
+                            ],
+                            "id": 149,
+                            "name": "MemberAccess",
+                            "src": "1242:30:0"
+                          }
+                        ],
+                        "id": 150,
+                        "name": "TupleExpression",
+                        "src": "1150:124:0"
+                      }
+                    ],
+                    "id": 151,
+                    "name": "Return",
+                    "src": "1142:132:0"
+                  }
+                ],
+                "id": 152,
+                "name": "Block",
+                "src": "1136:143:0"
+              }
+            ],
+            "id": 153,
+            "name": "FunctionDefinition",
+            "src": "1034:245:0"
+          }
+        ],
+        "id": 154,
+        "name": "ContractDefinition",
+        "src": "59:1223:0"
+      }
+    ],
+    "id": 155,
+    "name": "SourceUnit",
+    "src": "0:1282:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-09-22T01:03:02.756Z",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
