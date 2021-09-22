@@ -1,4 +1,4 @@
-# Book-Chain (📕->📗->📘->📙)
+# Bookchain (📕->📗->📘->📙)
 
 A DApp to track personal document using the Ethereum Blockchain.
 
