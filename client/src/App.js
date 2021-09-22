@@ -77,6 +77,10 @@ class App extends Component {
     console.log(this.state);
   };
 
+  onNewFileChange = (e) => {
+    console.log(e.target.files[0]);
+  };
+
   render() {
     if (!this.state.web3) {
       return <div>Loading Web3., accounts, and contract...</div>;
@@ -101,7 +105,7 @@ class App extends Component {
                   actual contents are never stored anywhere.
                 </small>
               </label>
-              <input type="file" />
+              <input type="file" onChange={this.onNewFileChange} />
             </div>
             <div>
               <label>
